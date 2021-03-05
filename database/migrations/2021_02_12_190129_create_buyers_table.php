@@ -18,6 +18,8 @@ class CreateBuyersTable extends Migration
           $table->string('nome');
           $table->string('cognome');
           $table->string('indirizzo');
+          $table->string('email');
+          $table->string('telefono');
           $table->timestamps();
         });
     }
