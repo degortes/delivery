@@ -31,18 +31,22 @@
   <section class="card-category">
       <div class="container-card-category">
           <div class="menu-filter">
-              <h3 class="ricerca-avanzata">Seleziona una categoria</h3>
+              <h3 class="ricerca-avanzata">Seleziona una o più categorie</h3>
               <div class="selection">
-                <select @change="searchRestaurants()" class="category-select" name="" v-model="selectedCategory">
-                  <option value="">Tutte le categorie</option>
-                  @foreach ($categories as $category)
-                    <option :value="{{$category->id}}">{{$category->name}}</option>
-                  @endforeach
-                </select>
+                    @foreach ($categories as $category)
+                        <div class="form-check">
+                            <label class="labelcontainer">
+
+                                <input @change="searchRestaurants()" v-model="selectedCategory" name="query" class="form-check-input" type="checkbox" :value="{{ $category->id }}" >
+                                <span class="checkmark">{{ $category->name }}</span>
+                            </label>
+                        </div>
+                    @endforeach
           </div>
           <div class="container-card">
 
-              <h1>Ultimi Ristoranti Inseriti</h1>
+              <h1 v-if="!selectedCategory.length">Ultimi Ristoranti Inseriti</h1>
+              <h1 v-else>I risultati per la tua selezione</h1>
               <div class="cards">
                   <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">
@@ -57,6 +61,7 @@
                               <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">Visita Ristorante</a>
                           </div>
                       </div>
+
                   </div>
               </div>
           </div>
@@ -64,7 +69,7 @@
   </section>
 
 
-  @if ($transaction_result)
+  @if ($transaction_result === true)
     <div id="myModal" class="modal" @click="closeModalOnWindow()">
       <div class="modal-content">
         <span @click="closeModal()" class="close">&times;</span>
@@ -79,8 +84,8 @@
         </div>
       </div>
     </div>
-  @elseif ($transaction_result == null)
-
+    @elseif ($transaction_result === null)
+        <div></div>
   @else
     <div id="myModal" class="modal" @click="closeModalOnWindow()">
      <div class="modal-content">

@@ -120,19 +120,13 @@
             font-size: 30px;
         }
 
-        .container-input-password, .container-input-email-address,
-        .container-input-name, .container-input-confirm-password, .container-input-address, .container-input-vat-number     {
-            input {
+        .container-button-register {
+
+            .button-register {
+                font-size: 30px;
 
             }
         }
-            .container-button-register {
-
-                .button-register {
-                        font-size: 30px;
-
-                }
-            }
     }
 
 }

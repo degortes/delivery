@@ -10,7 +10,7 @@ var app = new Vue({
 		btnGoUp:false,
 		restaurants: [],
 		dishesList: [],
-		selectedCategory: '',
+		selectedCategory: [],
 		selectedRestaurant: '',
 		totalQuantity: 0,
 		totalPrice: 0,
@@ -64,14 +64,26 @@ var app = new Vue({
 		},
 
 		showModal() {
-			var modal = document.getElementById("myModal");
+			var that = this;
+			Vue.nextTick(function() {
+				var modal = app.$el.querySelector("#myModal");
+				that.servicePage = false;
+
+				if(modal) {
+					modal.style.display = 'block';
+					console.log(modal.style.display);
+				}
+			});
+
+		},
+		restModal () {
+			var modal = document.getElementById("restModal");
 			this.servicePage = false;
 
 			if(modal) {
 				modal.style.display = 'block';
 				console.log(modal.style.display);
 			}
-
 		},
 		closeModal() {
 			var modal = document.getElementById("myModal");

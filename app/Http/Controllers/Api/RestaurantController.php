@@ -14,14 +14,32 @@ class RestaurantController extends Controller
 {
     public function index () {
 
-        $category_id = $_GET['query']; //recupero il parametro query (id di category)
 
-      if($category_id) { //se la categoria e' selezionata
-        $restaurants = Restaurant::whereHas('categories', function (Builder $query) use ($category_id)  {
-          $query->where('id', '=', $category_id);
-        })->get(); //cerco quei ristoranti che hanno una categoria con id specifica
+    //recupero il parametro query (id di category)
+
+      if(isset($_GET['query'])) {
+          $category_id = $_GET['query'];//se la categoria e' selezionata
+          $show = [];
+
+          foreach ($category_id as $category) {
+              // code...
+              $restaurants = Restaurant::whereHas('categories', function (Builder $query) use ($category)  {
+                  $query->where('id', '=', $category);
+              })->get();
+              foreach ($restaurants as $restaurant) {
+                  if (!in_array($restaurant , $show )) {
+                      // code...
+                      $show[] = $restaurant;
+                  }
+                  // code...
+              }
+          }
+          $restaurants = $show;
+         //cerco quei ristoranti che hanno una categoria con id specifica
       } else {
-        $restaurants = Restaurant::limit(8)->get();
+        //recupero il parametro query (id di category)
+
+        $restaurants = Restaurant::limit(8)->orderBy('id' , 'desc')->get();
       }
 
          // prendo tutti i post
@@ -31,31 +49,4 @@ class RestaurantController extends Controller
         ]);
     }
 
-    //     public function show($slug)
-    //     {
-    //       $restaurant = Restaurant::where('slug', $slug)->first();
-    //       if(!$restaurant) {
-    //           abort(404);
-    //       }
-    //
-    //       $courses_id = [];
-    //
-    //       foreach ($restaurant->dishes as $dish) {
-    //         if (!in_array($dish->course_id, $courses_id)) {
-    //           $courses_id[] = $dish->course_id;
-    //         }
-    //       }
-    //
-    //       $courses = Course::whereIn('id', $courses_id)->get();
-    //
-    //       $data = [
-    //         'restaurant' => $restaurant,
-    //         'courses' => $courses,
-    //         'dishes' => $restaurant->dishes
-    //       ];
-    //       return response()->json([ // restituisce un json con i vari post
-    //           'success' => true,
-    //           'results' => $data
-    //     ]);
-    // }
 }

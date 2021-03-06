@@ -386,12 +386,6 @@
                         a{
 
                             font-size: 23px;
-
-                            &:hover {
-
-
-
-                            }
                         }
                     }
                 }
@@ -460,13 +454,6 @@
 
                         padding: 10px 0px;
                         margin-top: 0;
-
-
-
-                        &:hover {
-
-
-                        }
                     }
                 }
             }
@@ -491,16 +478,9 @@
 
 
                     .body-restaurant-card-show{
-
-                        img {
-
-                        }
-
                         h3 {
                             font-size: 25px;
                         }
-
-
                     }
                 }
 
@@ -514,23 +494,6 @@
 
                             padding: 5px 15px;
                             margin: 5px;
-
-                            &:hover {
-
-                            }
-                        }
-
-                        .button-dettagli-show {
-
-                        }
-
-                        .button-modifica-show {
-
-                        }
-
-                        .button-elimina-show {
-
-
                         }
                     }
                 }
@@ -541,26 +504,14 @@
 
 @media screen and (min-width: 1024px) {
 
-
     .dashboard-restaurant-show {
-
-
-
         .dashboard-header-restaurant-show {
-
-
-
             a {
-
-
                 h1 {
                     font-size: 40px;
-
                 }
             }
-
-
-            }
+        }
 
         .dashboard-body-restaurant-show {
             height: calc(100vh - 97px - 69px);
@@ -572,19 +523,8 @@
                 ul{
 
                     li {
-
-
-
                         a{
-
                             font-size: 25px;
-
-
-                            &:hover {
-
-
-
-                            }
                         }
                     }
                 }
@@ -612,15 +552,6 @@
 
                     width: 50%;
                     margin: 30px auto 0;
-
-
-                    h3 {
-
-
-                        strong {
-
-                        }
-                    }
                 }
 
                 .button-create-order {
@@ -631,24 +562,6 @@
                         width: 45%;
                         margin: 5px;
 
-                    }
-
-                    .button-create-new-show {
-
-
-                        &:hover {
-
-
-                        }
-                    }
-
-                    .button-order-new-show {
-
-
-                        &:hover {
-
-
-                        }
                     }
                 }
             }
@@ -671,11 +584,6 @@
                     flex-basis: 30%;
 
                     .body-restaurant-card-show{
-
-                        img {
-
-                        }
-
                         h3 {
                             font-size: 20px;
                         }
@@ -692,22 +600,6 @@
 
                             padding: 5px 15px;
                             margin: 5px;
-
-                            &:hover {
-
-                            }
-                        }
-
-                        .button-dettagli-show {
-
-                        }
-
-                        .button-modifica-show {
-
-                        }
-
-                        .button-elimina-show {
-
                         }
                     }
                 }
@@ -737,22 +629,13 @@
 
         .dashboard-body-restaurant-show {
 
-
             .dashboard-body-menu-restaurant-show {
-
 
                 ul{
 
                     li {
-
-
                         a{
-
                             font-size: 25px;
-
-                            &:hover {
-
-                            }
                         }
                     }
                 }
@@ -774,17 +657,8 @@
 
                 .title-restaurant-show{
 
-
                     width: 40%;
 
-
-                    h3 {
-
-
-                        strong {
-
-                        }
-                    }
                 }
 
                 .button-create-order {
@@ -792,23 +666,6 @@
 
                     .show{
                         width: 47%;
-                    }
-
-                    .button-create-new-show {
-
-
-                        &:hover {
-
-                        }
-                    }
-
-                    .button-order-new-show {
-
-
-                        &:hover {
-
-
-                        }
                     }
                 }
             }
@@ -833,44 +690,8 @@
 
 
                     .body-restaurant-card-show{
-
-                        img {
-
-                        }
-
                         h3 {
                             font-size: 25px;
-                        }
-
-
-                    }
-                }
-
-                .details-restaurant-card-show {
-
-
-                    .container-button-action-show{
-
-
-                        .button-show {
-
-
-
-                            &:hover {
-
-                            }
-                        }
-
-                        .button-dettagli-show {
-
-                        }
-
-                        .button-modifica-show {
-
-                        }
-
-                        .button-elimina-show {
-
                         }
                     }
                 }
@@ -913,10 +734,6 @@
                         a{
 
                             font-size: 25px;
-
-                            &:hover {
-
-                            }
                         }
                     }
                 }
@@ -938,42 +755,15 @@
 
                 .title-restaurant-show{
 
-
                     width: 30%;
 
-
-                    h3 {
-
-
-                        strong {
-
-                        }
-                    }
                 }
 
                 .button-create-order {
 
-
                     .show{
                         width: 40%;
                         margin: 10px 15px;
-                    }
-
-                    .button-create-new-show {
-
-
-                        &:hover {
-
-                        }
-                    }
-
-                    .button-order-new-show {
-
-
-                        &:hover {
-
-
-                        }
                     }
                 }
             }
@@ -988,9 +778,7 @@
 
         .container-card-restaurant-show {
 
-
             .restaurants-show {
-
 
                 .restaurant-card-show {
 
@@ -1000,44 +788,8 @@
 
 
                     .body-restaurant-card-show{
-
-                        img {
-
-                        }
-
                         h3 {
                             font-size: 25px;
-                        }
-
-
-                    }
-                }
-
-                .details-restaurant-card-show {
-
-
-                    .container-button-action-show{
-
-
-                        .button-show {
-
-
-
-                            &:hover {
-
-                            }
-                        }
-
-                        .button-dettagli-show {
-
-                        }
-
-                        .button-modifica-show {
-
-                        }
-
-                        .button-elimina-show {
-
                         }
                     }
                 }

@@ -56,7 +56,7 @@
                     </select>
                 </div>
                 <div class="list-plate">
-                    <input class="check" type="radio" name="visibility" value="1">
+                    <input class="check" type="radio" name="visibility" value="1" checked>
                     <label for="visible">Imposta a visibile</label>
                 </div>
                 <div class="list-plate">

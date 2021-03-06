@@ -113,36 +113,5 @@
 
 @section('script')
 
-  {{-- <script type="text/javascript">
-
-      braintree.dropin.create(
-        {
-          authorization: '{{$clientToken}}',
-          container: '#dropin-container'
-        },
-        (error, dropinInstance) =>
-        {
-          if (error) console.error(error);
-          window.dropinInstance = dropinInstance; //salvo la dropinInstance nella window(finestra del browser) cioe' lo scope globale che e' accessibile da qualsiasi funzione js (variabile globale)
-
-          // form.addEventListener('submit', event => {
-          //   event.preventDefault(); //non serve perche' sul submit stiamo chiamando la save
-          //
-          //   dropinInstance.requestPaymentMethod((error, payload) =>
-          //   {
-          //     if (error) console.error(error);
-          //
-          //     document.getElementById('nonce').value = payload.nonce;
-          //     form.submit();
-          //   });
-          // });
-        });
-        // });
-
-
-    </script> --}}
   @include('partials.footer')
-
-  {{-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" charset="utf-8"></script> --}}
-
 @endsection

@@ -186,20 +186,6 @@
                         }
                     }
                 }
-
-                // .button-elimina-index {
-                //
-                //     color: #101927;
-                //     display: inline-block;
-                //     background: rgba(255, 99, 71, 0.5);
-                //
-                //     &:hover {
-                //             color: $gold;
-                //             background-color: #FF0000;
-                //     }
-                //
-                // }
-
                 .button-index {
 
                     margin-bottom: 7px;
@@ -249,6 +235,35 @@
         }
     }
 }
+form {
+    margin-top: 10px;
+
+    .button-elimina-show {
+        color: $gold;
+        background: rgba(255, 99, 71, 0.5);
+        transition: 1s ease-in-out;
+        margin-bottom: 10px;
+        text-decoration: none;
+        padding: 6px 100px;
+        display: inline-block;
+        border-radius: 10px;
+        font-size: 20px;
+        border: 1px solid $gold;
+        margin: 0 3px;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            border-radius: 50%;
+
+        }
+
+        &:hover {
+            color: #101927;
+            background-color: #FF0000;
+        }
+    }
+}
+
 
 
 @media screen and (min-width: 768px){
@@ -291,12 +306,6 @@
                         a{
 
                             font-size: 23px;
-
-                            &:hover {
-
-
-
-                            }
                         }
                     }
                 }
@@ -332,19 +341,6 @@
                 flex-basis: 60%;
 
 
-                .title-restaurant-card {
-
-
-                    h1 {
-
-                    }
-
-                }
-                .cover-card {
-                    img {
-
-                    }
-                }
 
                 .action-restaurant-card-index {
 
@@ -353,85 +349,12 @@
                     justify-content: center;
 
 
-                    .flex {
-
-                    }
-
-
-                    .container-button-action-index-start {
-
-                        .button-dettagli-index {
-
-                            &:hover {
-
-
-                            }
-
-                        }
-                    }
-
-                    .container-button-action-index-center {
-
-                        .button-ordini-index {
-
-
-                            &:hover {
-
-                            }
-
-
-                        }
-                    }
-
-                    .container-button-action-index-end {
-
-
-                        .button-modifica-index {
-
-                            &:hover {
-
-                            }
-
-                        }
-                    }
-
-                    // .button-elimina-index {
-                    //
-                    //
-                    //
-                    //     &:hover {
-                    //
-                    //     }
-                    //
-                    // }
-
                     .button-index {
 
                         width: 100%;
                         margin: 10px 5px;
                         padding: 10px 25px;
 
-                        &:hover {
-
-
-                        }
-
-                    }
-
-                }
-
-                .body-restaurant-card-index{
-
-                    .details-restaurant-card-index {
-
-
-                        p {
-
-
-                            strong {
-
-                            }
-                        }
                     }
                 }
             }
@@ -445,14 +368,6 @@
 
     .dashboard-restaurant-index {
 
-        .dashboard-header-restaurant-index {
-
-
-            h1 {
-
-
-            }
-        }
 
         .dashboard-body-restaurant-index {
 
@@ -463,52 +378,12 @@
                 flex-basis: 30%;
 
 
-                ul {
-
-
-                    li {
-
-
-
-                        a{
-
-
-
-
-                            &:hover {
-
-
-
-                            }
-                        }
-                    }
-                }
             }
         }
     }
 
     .dashboard-body-content-restaurant-index{
-
-
-
-        .container-restaurant-index {
-
-
-
-            .title-restaurant-index {
-
-
-
-                h1 {
-
-                }
-            }
-        }
-
         .restaurants-index {
-
-
-
 
             .restaurant-card-index {
 
@@ -535,68 +410,9 @@
                 .action-restaurant-card-index {
 
 
-                    .flex {
-
-                    }
-
-
-                    .container-button-action-index-start {
-
-                        .button-dettagli-index {
-
-                            &:hover {
-
-
-                            }
-
-                        }
-                    }
-
-                    .container-button-action-index-center {
-
-                        .button-ordini-index {
-
-
-                            &:hover {
-
-                            }
-
-
-                        }
-                    }
-
-                    .container-button-action-index-end {
-
-
-                        .button-modifica-index {
-
-                            &:hover {
-
-                            }
-
-                        }
-                    }
-
-                    // .button-elimina-index {
-                    //
-                    //
-                    //
-                    //     &:hover {
-                    //
-                    //     }
-                    //
-                    // }
 
                     .button-index {
-
-
                         margin: 10px;
-
-
-                        &:hover {
-
-
-                        }
 
                     }
 
@@ -655,13 +471,6 @@
                         a{
 
                             font-size: 25px;
-
-
-                            &:hover {
-
-
-
-                            }
                         }
                     }
                 }
@@ -708,83 +517,12 @@
 
                 }
 
-                .cover-card {
-                    img {
-
-
-                    }
-                }
-
                 .action-restaurant-card-index {
 
-
-                    .flex {
-
-                    }
-
-
-                    .container-button-action-index-start {
-
-                        .button-dettagli-index {
-
-                            &:hover {
-
-
-                            }
-
-                        }
-                    }
-
-                    .container-button-action-index-center {
-
-                        .button-ordini-index {
-
-
-                            &:hover {
-
-                            }
-
-
-                        }
-                    }
-
-                    .container-button-action-index-end {
-
-
-                        .button-modifica-index {
-
-                            &:hover {
-
-                            }
-
-                        }
-                    }
-
-                    // .button-elimina-index {
-                    //
-                    //
-                    //
-                    //     &:hover {
-                    //
-                    //     }
-                    //
-                    // }
-
                     .button-index {
-
-
                         margin: 10px;
-
-
-                        &:hover {
-
-
-                        }
-
                     }
-
                 }
-
                 .body-restaurant-card-index{
 
                     .details-restaurant-card-index {

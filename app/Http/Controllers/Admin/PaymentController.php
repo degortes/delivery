@@ -10,34 +10,6 @@ use App\Restaurant;
 
 class PaymentController extends Controller
 {
-    public function index() {
-        $user_id = Auth::user()->id;
-
-        $data = [
-            'restaurants' =>Restaurant::where('user_id' , $user_id )->get()
-        ];
-        return view('admin.orders.index', $data);
-    }
-    public function show($id) {
-        $own_id = [];
-        $user_id = Auth::user()->id;
-        $myrestaurants = Restaurant::where('user_id', $user_id)->get();
-        foreach ($myrestaurants as $myrestaurant) {
-            if (!in_array($myrestaurant->id, $own_id )) {
-                $own_id[] = $myrestaurant->id;
-            }
-        }
-        $order = Payment::where('id' , $id )->first();
-        if (!in_array($order->restaurant_id, $own_id)) {
-            abort(404);
-        }
-        $data = [
-            'order' => $order,
-            'id' => $id
-        ];
-        return view('admin.orders.show', $data);
-
-    }
     public function details($id) {
         $own_id = [];
         $user_id = Auth::user()->id;

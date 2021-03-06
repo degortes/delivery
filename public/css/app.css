@@ -94,10 +94,10 @@ header.active::after {
 }
 header .wp-header {
   background: url("/images/italian-mediterranean.jpg");
-  height: 85vh;
+  height: 50vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-position: 0 -540px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -120,7 +120,7 @@ header #menu-fixed {
 header #menu-fixed.sticky {
   transition: 400ms ease;
   box-shadow: 0px 15px 10px -15px #111;
-  background-image: linear-gradient(45deg, black, #f5f4e1);
+  background-image: linear-gradient(45deg, #032d35, #199cb7);
 }
 header #menu-fixed.sticky a {
   color: #fff;
@@ -396,6 +396,7 @@ header.active .menu-mobile {
   transform: translate(-50%, -50%);
 }
 .text-header .principal-text {
+  width: 100vw;
   color: white;
   text-align: center;
   padding: 15px;
@@ -486,7 +487,7 @@ header.active .menu-mobile {
 .how-to-order {
   width: 100%;
   height: auto;
-  background-color: #020708;
+  background-image: linear-gradient(45deg, #032d35, #199cb7);
   color: #d2ac7b;
   text-align: center;
   border-top: 1px solid #d2ac7b;
@@ -547,17 +548,50 @@ header.active .menu-mobile {
 }
 .card-category .container-card-category .menu-filter .selection {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
 }
-.card-category .container-card-category .menu-filter .selection select {
-  width: 80%;
-  padding: 8px 10px;
-  color: #d2ac7b;
+.card-category .container-card-category .menu-filter .selection .labelcontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
   cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 15px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card-category .container-card-category .menu-filter .selection .labelcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.card-category .container-card-category .menu-filter .selection .checkmark {
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.card-category .container-card-category .menu-filter .selection .labelcontainer input:checked ~ .checkmark {
+  color: black;
+  background-color: gold;
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 4px;
 }
 .card-category .container-card-category .container-card {
   margin: auto;
@@ -857,6 +891,7 @@ footer .store {
   .container-brand-sx .container-brand .brand {
     font-size: 40px;
   }
+
   .container-login-register {
     justify-content: flex-end;
   }
@@ -1016,6 +1051,7 @@ footer .store {
   .form-group .label-email-address-login, .form-group .label-password-login {
     font-size: 30px;
   }
+
   .form-check .form-check-label {
     font-size: 20px;
   }
@@ -1279,6 +1315,31 @@ footer .store {
   padding-top: 5px;
 }
 
+form {
+  margin-top: 10px;
+}
+form .button-elimina-show {
+  color: #d2ac7b;
+  background: rgba(255, 99, 71, 0.5);
+  transition: 1s ease-in-out;
+  margin-bottom: 10px;
+  text-decoration: none;
+  padding: 6px 100px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 1px solid #d2ac7b;
+  margin: 0 3px;
+  transition: 1s ease-in-out;
+}
+form .button-elimina-show:hover {
+  border-radius: 50%;
+}
+form .button-elimina-show:hover {
+  color: #101927;
+  background-color: #FF0000;
+}
+
 @media screen and (min-width: 768px) {
   .dashboard-restaurant-index .dashboard-header-restaurant-index h1 {
     font-size: 30px;
@@ -1303,6 +1364,7 @@ footer .store {
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
     font-size: 23px;
   }
+
   .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index {
     margin: 20px 0;
   }
@@ -1330,6 +1392,7 @@ footer .store {
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     flex-basis: 30%;
   }
+
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 55%;
   }
@@ -1367,6 +1430,7 @@ footer .store {
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index {
     margin: 25px 0;
   }
@@ -1549,10 +1613,11 @@ footer .store {
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
     font-size: 23px;
   }
-  .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
+
+  .dashboard-body-content-restaurant-create {
     flex-basis: 80%;
   }
-  .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create {
     width: 70%;
     margin: 20px auto;
   }
@@ -1957,6 +2022,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 23px;
   }
+
   .dashboard-body-content-restaurant-show {
     height: calc(100vh - 97px - 60px);
   }
@@ -2019,6 +2085,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-show {
     height: calc(100vh - 97px - 69px);
   }
@@ -2056,6 +2123,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
     font-size: 40px;
   }
@@ -2085,6 +2153,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
     font-size: 40px;
   }
@@ -2968,6 +3037,7 @@ footer .store {
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
     font-size: 26px;
   }
+
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
     font-size: 40px;
   }

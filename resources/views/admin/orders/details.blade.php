@@ -23,27 +23,10 @@
                         <li>
                             <span>Status: <strong>Accettato</strong></span>
                         </li>
-                        {{-- @if ($payment->status == 1)
-                            <li>
-                                <span>Status: <strong>Respinto</strong></span>
-                            </li> --}}
-                        {{-- @elseif ($payment->status == 2)
-                                <li>
-                                    <span>Status: <strong>Accettato</strong></span>
-                                </li>
-                        @else
-                            <li>
-                                <span>Status: <strong>Sospeso</strong></span>
-                            </li>
-                        @endif --}}
                         <li>
                             <span>Data: <strong>{{$payment->created_at}}</strong></span>
                         </li>
                     </ul>
-                    {{-- <div class="link-details-order">
-                        <a href="{{route('admin.orders.show', ['id' => $payment->id ])}}">Vedi i dettagli
-                        </a>
-                    </div> --}}
                 </div>
             @endforeach
         </div>
