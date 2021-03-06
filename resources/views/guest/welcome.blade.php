@@ -33,12 +33,15 @@
           <div class="menu-filter">
               <h3 class="ricerca-avanzata">Seleziona una categoria</h3>
               <div class="selection">
-                <select @change="searchRestaurants()" class="category-select" name="" v-model="selectedCategory">
-                  <option value="">Tutte le categorie</option>
-                  @foreach ($categories as $category)
-                    <option :value="{{$category->id}}">{{$category->name}}</option>
-                  @endforeach
-                </select>
+                    @foreach ($categories as $category)
+                        <div class="form-check">
+                            <label class="labelcontainer">
+
+                                <input @change="searchRestaurants()" v-model="selectedCategory" name="query" class="form-check-input" type="checkbox" :value="{{ $category->id }}" >
+                                <span class="checkmark">{{ $category->name }}</span>
+                            </label>
+                        </div>
+                    @endforeach
           </div>
           <div class="container-card">
 
@@ -57,6 +60,7 @@
                               <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">Visita Ristorante</a>
                           </div>
                       </div>
+
                   </div>
               </div>
           </div>

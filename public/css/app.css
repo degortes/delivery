@@ -547,17 +547,50 @@ header.active .menu-mobile {
 }
 .card-category .container-card-category .menu-filter .selection {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
 }
-.card-category .container-card-category .menu-filter .selection select {
-  width: 80%;
-  padding: 8px 10px;
-  color: #d2ac7b;
+.card-category .container-card-category .menu-filter .selection .labelcontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
   cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 15px;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card-category .container-card-category .menu-filter .selection .labelcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.card-category .container-card-category .menu-filter .selection .checkmark {
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.card-category .container-card-category .menu-filter .selection .labelcontainer input:checked ~ .checkmark {
+  color: black;
+  background-color: gold;
+  display: inline-block;
+  text-align: center;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 4px;
 }
 .card-category .container-card-category .container-card {
   margin: auto;

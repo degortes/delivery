@@ -10,7 +10,7 @@ var app = new Vue({
 		btnGoUp:false,
 		restaurants: [],
 		dishesList: [],
-		selectedCategory: '',
+		selectedCategory: [],
 		selectedRestaurant: '',
 		totalQuantity: 0,
 		totalPrice: 0,
