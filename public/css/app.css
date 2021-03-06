@@ -857,6 +857,7 @@ footer .store {
   .container-brand-sx .container-brand .brand {
     font-size: 40px;
   }
+
   .container-login-register {
     justify-content: flex-end;
   }
@@ -1016,6 +1017,7 @@ footer .store {
   .form-group .label-email-address-login, .form-group .label-password-login {
     font-size: 30px;
   }
+
   .form-check .form-check-label {
     font-size: 20px;
   }
@@ -1303,6 +1305,7 @@ footer .store {
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
     font-size: 23px;
   }
+
   .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index {
     margin: 20px 0;
   }
@@ -1330,6 +1333,7 @@ footer .store {
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     flex-basis: 30%;
   }
+
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
     flex-basis: 55%;
   }
@@ -1367,6 +1371,7 @@ footer .store {
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index {
     margin: 25px 0;
   }
@@ -1549,10 +1554,11 @@ footer .store {
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
     font-size: 23px;
   }
-  .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
+
+  .dashboard-body-content-restaurant-create {
     flex-basis: 80%;
   }
-  .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create {
+  .dashboard-body-content-restaurant-create .card-form-restaurant-create {
     width: 70%;
     margin: 20px auto;
   }
@@ -1957,6 +1963,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 23px;
   }
+
   .dashboard-body-content-restaurant-show {
     height: calc(100vh - 97px - 60px);
   }
@@ -2019,6 +2026,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-show {
     height: calc(100vh - 97px - 69px);
   }
@@ -2056,6 +2064,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
     font-size: 40px;
   }
@@ -2085,6 +2094,7 @@ footer .store {
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
     font-size: 25px;
   }
+
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
     font-size: 40px;
   }
@@ -2968,6 +2978,7 @@ footer .store {
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
     font-size: 26px;
   }
+
   .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
     font-size: 40px;
   }
