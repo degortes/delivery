@@ -12,9 +12,6 @@
                 <li>
                     <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
                 </li>
-                {{-- <li>
-                    <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
-                </li> --}}
             </ul>
         </div>
         <div class="dashboard-body-content-restaurant-edit">

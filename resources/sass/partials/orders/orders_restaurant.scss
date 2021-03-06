@@ -102,10 +102,6 @@
 
                     padding: 30px 0 10px 0;
 
-                    .details-restaurant-card-order {
-
-                    }
-
                     .action-restaurant-card-order {
 
                         .container-btn-action-order{
@@ -140,70 +136,24 @@
         }
     }
 }
-
-// .table {
-//     width: 100%;
-//     tbody{
-//         tr{
-//             .btn {
-//                 display: inline-block;
-//                 padding: 8px;
-//                 border: 1px solid #000;
-//                 border-radius: 5px;
-//                 text-decoration: none;
-//                 color: #fff;
-//                 text-transform: uppercase;
-//             }
-//
-//             .btn-dettagli {
-//                 background-color: #4169E1;
-//             }
-//
-//             .btn-modifica {
-//                 background-color: #FFA500;
-//             }
-//         }
-//     }
-// }
 @media screen and (min-width: 768px){
 
     .dashboard-order {
-
-        .dashboard-header-order {
-
-
-            h1 {
-
-            }
-        }
         .dashboard-body-order {
-
-
-
             .dashboard-body-menu-order{
 
+                .title-restaurant {
 
-                    .title-restaurant {
-
-                        font-size: 30px;
-                    }
-
-
-                        ol{
-                            li {
-                                padding: 15px 5px;
-                                    a{
-
-                                        font-size: 18px;
-
-
-                                        &:hover {
-
-
-                                        }
-                                    }
+                    font-size: 30px;
+                }
+                ol{
+                    li {
+                        padding: 15px 5px;
+                            a{
+                                font-size: 18px;
                             }
-                        }
+                    }
+                }
 
             }
             .dashboard-body-content-order{
@@ -219,8 +169,6 @@
                         }
                     }
                 }
-
-
             }
 
             .restaurants-order {
@@ -255,17 +203,9 @@
                             .container-btn-action-order{
 
 
-                                .btn{
-
-                                }
-
                                 .btn-dettagli {
                                     margin-bottom: 0;
                                     margin-right: 10px;
-
-                                }
-
-                                .btn-modifica {
 
                                 }
                             }
@@ -281,42 +221,25 @@
 
     .dashboard-order {
 
-        .dashboard-header-order {
-
-
-            h1 {
-
-            }
-        }
         .dashboard-body-order {
-
-
 
             .dashboard-body-menu-order{
 
                 flex-basis: 20%;
 
-                    .title-restaurant {
+                .title-restaurant {
 
-                        font-size: 40px;
-                    }
+                    font-size: 40px;
+                }
 
-
-                        ol{
-                            li {
-                                padding: 15px 5px;
-                                    a{
-
-                                        font-size: 20px;
-
-
-                                        &:hover {
-
-
-                                        }
-                                    }
-                            }
+                ol{
+                    li {
+                        padding: 15px 5px;
+                        a{
+                            font-size: 20px;
                         }
+                    }
+                }
 
             }
             .dashboard-body-content-order{
@@ -349,39 +272,20 @@
                     .title-restaurant-card-order{
 
                         h4 {
-
                             font-size: 40px;
-
                         }
-
-
                     }
 
                     .body-restaurant-card-order{
-
-
-
-                        .details-restaurant-card-order {
-
-                        }
 
                         .action-restaurant-card-order {
 
                             .container-btn-action-order{
 
-
-                                .btn{
-
-                                }
-
                                 .btn-dettagli {
 
                                     margin-bottom: 0;
                                     margin-right: 10px;
-
-                                }
-
-                                .btn-modifica {
 
                                 }
                             }

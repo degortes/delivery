@@ -127,13 +127,6 @@
 
                         .form-check-restaurant-create {
                             display: flex;
-
-
-                            input {
-
-
-                            }
-
                             label {
                                 padding-left: 10px;
                             }
@@ -214,18 +207,11 @@
                 ul{
 
                     li {
-
                         border-bottom: 1px solid $gold;
                         padding: 15px;
 
                         a{
-
                             font-size: 23px;
-
-                            &:hover {
-
-
-
                             }
                         }
                     }
@@ -247,68 +233,6 @@
                 .card-title-restaurant-create {
 
                 }
-
-                form {
-
-                    .content-form-restaurant-create{
-
-
-
-                        h3 {
-
-                        }
-
-                        .content-form-input-restaurant-create {
-
-                            input {
-
-                            }
-                        }
-
-
-                        .content-form-file-restaurant-create {
-
-
-
-                            input {
-
-                            }
-
-                        }
-
-                        .content-form-category-restaurant-create {
-
-
-
-
-                            input {
-
-                            }
-
-                            .form-check-restaurant-create {
-
-
-
-                                input {
-
-
-                                }
-
-                                label {
-
-                                }
-                            }
-                        }
-
-                        button {
-
-
-                            &:hover {
-
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -317,40 +241,15 @@
 @media screen and (min-width: 1024px) {
 
     .dashboard-restaurant-create {
-
-        .dashboard-header-restaurant-create {
-
-
-
-                h1 {
-
-                }
-        }
-
-
         .dashboard-body-restaurant-create {
-
             display: flex;
-
-
             .dashboard-body-menu-restaurant-create {
-
                 flex-basis: 30%;
-
                 ul{
 
                     li {
-
-
-
                         a{
                             font-size: 25px;
-
-                            &:hover {
-
-
-
-                            }
                         }
                     }
                 }
@@ -376,19 +275,6 @@
                     .content-form-restaurant-create{
 
 
-
-                        h3 {
-
-                        }
-
-                        .content-form-input-restaurant-create {
-
-                            input {
-
-                            }
-                        }
-
-
                         .content-form-file-restaurant-create {
 
 
@@ -402,38 +288,6 @@
                             }
 
                         }
-
-                        .content-form-category-restaurant-create {
-
-
-
-
-                            input {
-
-                            }
-
-                            .form-check-restaurant-create {
-
-
-
-                                input {
-
-
-                                }
-
-                                label {
-
-                                }
-                            }
-                        }
-
-                        button {
-
-
-                            &:hover {
-
-                            }
-                        }
                     }
                 }
             }
@@ -444,124 +298,16 @@
 @media screen and (min-width: 1300px) {
 
     .dashboard-restaurant-create {
-
-        .dashboard-header-restaurant-create {
-
-
-
-                h1 {
-
-                }
-        }
-
-
         .dashboard-body-restaurant-create {
-
-
-
             .dashboard-body-menu-restaurant-create {
-
                 flex-basis: 20%;
-
-                ul{
-
-                    li {
-
-
-
-                        a{
-
-
-                            &:hover {
-
-
-
-                            }
-                        }
-                    }
-                }
             }
         }
-
         .dashboard-body-content-restaurant-create {
-
             justify-content: flex-start;
-
             .card-form-restaurant-create {
-
-
                 width: 35%;
                 margin-left: 250px;
-
-
-                .card-title-restaurant-create {
-
-                }
-
-                form {
-
-                    .content-form-restaurant-create{
-
-
-
-                        h3 {
-
-                        }
-
-                        .content-form-input-restaurant-create {
-
-                            input {
-
-                            }
-                        }
-
-
-                        .content-form-file-restaurant-create {
-
-
-
-
-
-                            input {
-
-
-                            }
-
-                        }
-
-                        .content-form-category-restaurant-create {
-
-
-
-
-                            input {
-
-                            }
-
-                            .form-check-restaurant-create {
-
-
-
-                                input {
-
-
-                                }
-
-                                label {
-
-                                }
-                            }
-                        }
-
-                        button {
-
-
-                            &:hover {
-
-                            }
-                        }
-                    }
-                }
             }
         }
     }

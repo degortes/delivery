@@ -86,10 +86,6 @@
             .brand {
 
                 font-size: 40px;
-
-                img{
-
-                }
             }
         }
     }
@@ -141,27 +137,10 @@
     .container-login-register {
         justify-content: flex-end;
 
-            .login-register {
-                display: flex;
-                flex-direction: row;
-
-
-                .route-login-register {
-
-                    .cart {
-
-                        i{
-
-
-                        }
-                    }
-
-
-                    a {
-
-                    }
-                }
-            }
+        .login-register {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
 }

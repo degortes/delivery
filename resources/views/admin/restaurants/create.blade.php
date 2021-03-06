@@ -12,9 +12,6 @@
                 <li>
                     <a href="{{route('admin.restaurants.index')}}" >I Tuoi Ristoranti</a>
                 </li>
-                {{-- <li>
-                    <a href="{{route('admin.dishes.create')}}" class="btn add-restaurant">Aggiungi Piatto</a>
-                </li> --}}
             </ul>
         </div>
         <div class="dashboard-body-content-restaurant-create">
@@ -77,35 +74,3 @@
 </div>
 
 @endsection
-
-{{-- <div class="content-form-category">
-    <label for="">Categoria</label>
-    <div class="form-group col-12">
-        @foreach ($categories as $category)
-        <div class="form-check">
-            <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
-            <label class="form-check-label">
-                {{ $category->name }}
-            </label>
-        </div>
-        @endforeach
-        @error('categories')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-    </div>
-</div> --}}
-
-
-{{-- <div class="form-group col-12">
-    @foreach ($categories as $category)
-    <div class="form-check">
-        <input name="categories[]" class="form-check-input" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
-        <label class="form-check-label">
-            {{ $category->name }}
-        </label>
-    </div>
-    @endforeach
-    @error('categories')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-</div> --}}

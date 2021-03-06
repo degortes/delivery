@@ -2205,7 +2205,7 @@ var app = new Vue({
         for (var i = 0; i < _this.dishesList.length; i++) {
           _this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
         }
-      }); // Cookies.remove('cartCookie')
+      });
     },
     goUp: function goUp() {
       // x button scrollUP
@@ -2215,7 +2215,6 @@ var app = new Vue({
       });
     },
     showModal: function showModal() {
-      console.log('ok');
       var modal = document.getElementById("myModal");
       this.servicePage = false;
 
@@ -2274,37 +2273,6 @@ var app = new Vue({
         });
       }
     },
-    // clear() {
-    // 	this.nome = '';
-    // 	this.cognome = '';
-    // 	this.indirizzo = '';
-    // 	this.cartCookie = [];
-    // 	this.cart = [];
-    // 	this.totalPriceCookie = 0;
-    // 	this.totalPrice = 0;
-    // 	Cookies.remove('nome');
-    // 	Cookies.remove('email');
-    // 	Cookies.remove('indirizzo');
-    // 	Cookies.remove('cartCookie');
-    // 	Cookies.remove('totalPriceCookie');
-    // 	Cookies.remove('totalQuantity');
-    // 	axios
-    // 	.get('http://localhost:8000/api/dishes', {
-    // 		params:{
-    // 			query: this.selectedRestaurant
-    // 		}
-    // 	})
-    // 	.then((risposta) =>{
-    // 		// assegno ad array restaurants la risposta API
-    // 		this.dishesList = risposta.data.results;
-    // 		for (var i = 0; i < this.dishesList.length; i++) {
-    // 			this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-    // 		}
-    //
-    // 	});
-    //
-    // 	// Cookies.remove('cartCookie')
-    // },
     showPayment: function showPayment() {
       var _this2 = this;
 
@@ -2322,22 +2290,13 @@ var app = new Vue({
       var _this3 = this;
 
       event.preventDefault(); //blocca il form per far eseguire il resto del codice
-      // var date = new Date();
-      // date.setTime(date.getTime() + (60 * 1000));
-      // Cookies.set('nome', this.nome, { expires: date })
-      // Cookies.set('cognome', this.cognome, { expires: date })
-      // Cookies.set('indirizzo', this.indirizzo, { expires: date })
-      // Cookies.set('cartCookie', this.cart, { expires: date })
-      // const form = document.getElementById('payment-form');
 
       this.dropinInstance.requestPaymentMethod(function (error, payload) {
         if (error) console.error(error);
-        document.getElementById('nonce').value = payload.nonce; // form.submit();
-
-        document.getElementById('payment-form').submit(); // this.clear() ;
-
+        document.getElementById('nonce').value = payload.nonce;
+        document.getElementById('payment-form').submit();
         _this3.servicePage = true;
-      }); // Cookies.remove('cartCookie')
+      });
     },
     cartBtnLessPlus: function cartBtnLessPlus() {
       // funzione per aggiornare lista item nel carrello
@@ -2388,7 +2347,7 @@ var app = new Vue({
             this.showCart = true;
             return this.totalQuantity = this.dishesList.reduce(function (total, product) {
               return total + product.quantity;
-            }, 0); // return this.cartList = this.dishesList.filter(product => product.quantity > 0);
+            }, 0);
           }
         }
       }
@@ -2445,9 +2404,7 @@ var app = new Vue({
 
     this.nome = Cookies.get('nome') !== 'undefined' && Cookies.get('nome');
     this.cognome = Cookies.get('cognome') !== 'undefined' && Cookies.get('cognome');
-    this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo'); // this.cartCookie = JSON.parse(Cookies.get('cartCookie') !== 'undefined') && Cookies.get('cartCookie')
-    // this.totalPriceCookie = (Cookies.get('totalPrice') !== 'undefined') && Cookies.get('totalPrice')
-
+    this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo');
     this.selectedRestaurant = window.location.href.slice(34);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
       params: {
@@ -2494,13 +2451,7 @@ var app = new Vue({
 
     if (sessionStorage.indirizzo) {
       this.indirizzo = sessionStorage.indirizzo;
-    } // if(sessionStorage.cartCookie){
-    // 	this.cart = JSON.parse(sessionStorage.cartCookie);
-    // }
-    // if(sessionStorage.totalPriceCookie){
-    // 	this.totalPrice = sessionStorage.totalPriceCookie;
-    // }
-
+    }
   },
   // fine mounted
   watch: {
@@ -2517,12 +2468,10 @@ var app = new Vue({
       Cookies.set('indirizzo', this.indirizzo);
     },
     cart: function cart(newCart) {
-      // sessionStorage.cartCookie = JSON.stringify(newCart);
       this.cartCookie = this.cart;
       Cookies.set('cartCookie', this.cartCookie);
     },
     totalPrice: function totalPrice() {
-      // sessionStorage.totalPriceCookie = Math.round(this.totalPrice * 100)/100;
       if (!this.cartCookie.length) {
         this.totalPrice = 0;
         this.totalPriceCookie = 0;
