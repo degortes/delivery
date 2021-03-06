@@ -67,13 +67,6 @@ class PaymentController extends Controller
       ]
     ]);
 
-    // $data = [
-    //   'result' => $result
-    // ];
-    // $request->session()->put('asd', 'asd');
-    // dd($new_payment);
-    // $user_id = Auth::user()->id;
-    // dd($user_id = Auth::user()->email);
 
     $restaurant = Restaurant::where('id' , $new_payment->restaurant_id)->first();
     // dd($new_payment->restaurant_id);

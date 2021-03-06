@@ -31,31 +31,4 @@ class RestaurantController extends Controller
         ]);
     }
 
-    //     public function show($slug)
-    //     {
-    //       $restaurant = Restaurant::where('slug', $slug)->first();
-    //       if(!$restaurant) {
-    //           abort(404);
-    //       }
-    //
-    //       $courses_id = [];
-    //
-    //       foreach ($restaurant->dishes as $dish) {
-    //         if (!in_array($dish->course_id, $courses_id)) {
-    //           $courses_id[] = $dish->course_id;
-    //         }
-    //       }
-    //
-    //       $courses = Course::whereIn('id', $courses_id)->get();
-    //
-    //       $data = [
-    //         'restaurant' => $restaurant,
-    //         'courses' => $courses,
-    //         'dishes' => $restaurant->dishes
-    //       ];
-    //       return response()->json([ // restituisce un json con i vari post
-    //           'success' => true,
-    //           'results' => $data
-    //     ]);
-    // }
 }
