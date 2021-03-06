@@ -31,7 +31,7 @@
   <section class="card-category">
       <div class="container-card-category">
           <div class="menu-filter">
-              <h3 class="ricerca-avanzata">Seleziona una categoria</h3>
+              <h3 class="ricerca-avanzata">Seleziona una o più categorie</h3>
               <div class="selection">
                     @foreach ($categories as $category)
                         <div class="form-check">
@@ -45,7 +45,8 @@
           </div>
           <div class="container-card">
 
-              <h1>Ultimi Ristoranti Inseriti</h1>
+              <h1 v-if="!selectedCategory.length">Ultimi Ristoranti Inseriti</h1>
+              <h1 v-else>I risultati per la tua selezione</h1>
               <div class="cards">
                   <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">
@@ -84,7 +85,7 @@
       </div>
     </div>
     @elseif ($transaction_result === null)
-        <div>.</div>
+        <div></div>
   @else
     <div id="myModal" class="modal" @click="closeModalOnWindow()">
      <div class="modal-content">

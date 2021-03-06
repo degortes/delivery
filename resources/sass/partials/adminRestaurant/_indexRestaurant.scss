@@ -235,6 +235,35 @@
         }
     }
 }
+form {
+    margin-top: 10px;
+
+    .button-elimina-show {
+        color: $gold;
+        background: rgba(255, 99, 71, 0.5);
+        transition: 1s ease-in-out;
+        margin-bottom: 10px;
+        text-decoration: none;
+        padding: 6px 100px;
+        display: inline-block;
+        border-radius: 10px;
+        font-size: 20px;
+        border: 1px solid $gold;
+        margin: 0 3px;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            border-radius: 50%;
+
+        }
+
+        &:hover {
+            color: #101927;
+            background-color: #FF0000;
+        }
+    }
+}
+
 
 
 @media screen and (min-width: 768px){

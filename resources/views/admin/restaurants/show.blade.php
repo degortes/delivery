@@ -55,7 +55,24 @@
                 <div class="restaurants-show">
                     @foreach ($restaurant->dishes as $dish)
                         <div class="restaurant-card-show">
-                            <div class="body-restaurant-card-show">
+                            @if (!$dish->visibility)
+                                <form action="{{ route('admin.dishes.update', ['dish' => $dish->id]) }}" method="post" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        <input hidden name="course_id" value="{{$dish->course_id}}" >
+                                        <input hidden name="name" value="{{$dish->name}}" >
+                                        <input hidden name="ingredients" value="{{$dish->ingredients}}" >
+                                        <input hidden name="price" value="{{$dish->price}}" >
+                                        <input hidden name="visibility" value="1" >
+                                        <div class="button-edit-plate">
+                                            <button type="submit" >
+                                                imposta a visibile
+                                            </button>
+                                        </div>
+                                </form>
+
+                            @endif
+                            <div class="{{$dish->visibility ? 'body-restaurant-card-show' :'body-restaurant-card-show dishnotavailable'}} ">
                                 @if ($dish->cover)
                                     <img src="{{asset('storage/'. $dish->cover)}}" alt="">
                                 @endif

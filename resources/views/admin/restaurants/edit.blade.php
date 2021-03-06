@@ -56,15 +56,15 @@
                             @foreach ($categories as $category)
                                 <div class="form-check-restaurant-edit">
                                     @if ($errors->any())
-                                        <input name="categories[]" type="checkbox" value="{{ $category->id }}"
-                                        {{ in_array($category->id , old('categories', [])) ? 'checked=checked' : '' }}>
                                         <label>
+                                            <input name="categories[]" type="checkbox" value="{{ $category->id }}"
+                                            {{ in_array($category->id , old('categories', [])) ? 'checked=checked' : '' }}>
                                             {{ $restaurant->name }}
                                         </label>
                                         @else
-                                        <input name="categories[]"  type="checkbox" value="{{ $category->id }}"
-                                        {{ $restaurant->categories->contains($category) ? 'checked=checked' : '' }}>
                                         <label>
+                                            <input name="categories[]"  type="checkbox" value="{{ $category->id }}"
+                                            {{ $restaurant->categories->contains($category) ? 'checked=checked' : '' }}>
                                             {{ $category->name }}
                                         </label>
                                     @endif

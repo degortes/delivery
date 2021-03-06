@@ -39,7 +39,7 @@ class RestaurantController extends Controller
       } else {
         //recupero il parametro query (id di category)
 
-        $restaurants = Restaurant::limit(8)->get();
+        $restaurants = Restaurant::limit(8)->orderBy('id' , 'desc')->get();
       }
 
          // prendo tutti i post

@@ -52,12 +52,14 @@
                    </select>
                 </div>
                 <div class="list list-edit-plate">
-                    <input type="radio" class="check" name="visibility" value="1">
-                    <label for="visible">Imposta a visibile</label>
+                    <label >
+                        <input type="radio" class="check" name="visibility" value="1" {{$dish->visibility == old('visibility', 1 ) ? 'checked=checked' : ''}}>
+                    Imposta a visibile</label>
                 </div>
                 <div class="list list-edit-plate">
-                    <input class="check" type="radio" name="visibility" value="0">
-                    <label for="no-visible">Imposta a non visibile</label>
+                    <label >
+                        <input type="radio" class="check" name="visibility" value="0" {{$dish->visibility == old('visibility', 0 ) ? 'checked=checked' : ''}}> Imposta a non visibile
+                    </label>
                 </div>
                 <div class="list list-edit-plate">
                     <input class="input-search" type="file" name="cover">

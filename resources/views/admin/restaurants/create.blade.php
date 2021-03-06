@@ -48,8 +48,8 @@
                         <div class="content-form-category-restaurant-create">
                             @foreach ($categories as $category)
                                 <div class="form-check-restaurant-create">
-                                    <input name="categories[]" class="form-check-input-restaurant-create" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
                                     <label class="form-check-label-restaurant-create">
+                                        <input name="categories[]" class="form-check-input-restaurant-create" type="checkbox" value="{{ $category->id }}" {{ in_array($category->id , old('category', [])) ? 'checked=checked' : '' }}>
                                         {{ $category->name }}
                                     </label>
                                 </div>

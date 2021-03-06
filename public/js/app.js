@@ -2215,7 +2215,19 @@ var app = new Vue({
       });
     },
     showModal: function showModal() {
-      var modal = document.getElementById("myModal");
+      var that = this;
+      Vue.nextTick(function () {
+        var modal = app.$el.querySelector("#myModal");
+        that.servicePage = false;
+
+        if (modal) {
+          modal.style.display = 'block';
+          console.log(modal.style.display);
+        }
+      });
+    },
+    restModal: function restModal() {
+      var modal = document.getElementById("restModal");
       this.servicePage = false;
 
       if (modal) {

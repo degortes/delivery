@@ -42,16 +42,31 @@
                                     <div class="flex container-button-action-index-end">
                                         <a href="{{route('admin.restaurants.edit' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-modifica-index">Modifica</a>
                                     </div>
-                                    {{-- <a href="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" class="button-index button-elimina-index">Elimina</a> --}}
-                                    {{-- <div>
-                                    <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
-                                    <button class="button-index button-elimina-index" type="submit" name="button" >Elimina</button>
-                                    @csrf
-                                    @method('DELETE')
-                                    </form>
 
-                                    </div> --}}
+
                                 </div>
+                                @if (!count($restaurant->dishes))
+                                    <div class="action-restaurant-card-index" >
+
+                                        <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div id="restModal"class="modal" @click="closeModalOnWindow()">
+                                              <div class="modal-content">
+                                                <div class="result">
+                                                    <i class="fas fa-times-circle fa-9x"></i>
+                                                    <h2 class="mt-3 mb-3">
+                                                      Sicuro di voler eliminare il ristorante?
+                                                    </h2>
+                                                    <button class="button-elimina-show" type="submit">Elimina</button>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <a @click="restModal()" class="button-elimina-show"><i class="fas fa-trash-alt"></i></a>
+                                        </form>
+                                    </div>
+                                @endif
                                 <div class="body-restaurant-card-index">
                                     <div class="details-restaurant-card-index">
                                         <p>Indirizzo: <strong>{{ $restaurant->address }}</strong></p>

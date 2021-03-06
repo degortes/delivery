@@ -94,10 +94,10 @@ header.active::after {
 }
 header .wp-header {
   background: url("/images/italian-mediterranean.jpg");
-  height: 85vh;
+  height: 50vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-position: 0 -540px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -120,7 +120,7 @@ header #menu-fixed {
 header #menu-fixed.sticky {
   transition: 400ms ease;
   box-shadow: 0px 15px 10px -15px #111;
-  background-image: linear-gradient(45deg, black, #f5f4e1);
+  background-image: linear-gradient(45deg, #032d35, #199cb7);
 }
 header #menu-fixed.sticky a {
   color: #fff;
@@ -396,6 +396,7 @@ header.active .menu-mobile {
   transform: translate(-50%, -50%);
 }
 .text-header .principal-text {
+  width: 100vw;
   color: white;
   text-align: center;
   padding: 15px;
@@ -486,7 +487,7 @@ header.active .menu-mobile {
 .how-to-order {
   width: 100%;
   height: auto;
-  background-color: #020708;
+  background-image: linear-gradient(45deg, #032d35, #199cb7);
   color: #d2ac7b;
   text-align: center;
   border-top: 1px solid #d2ac7b;
@@ -1312,6 +1313,31 @@ footer .store {
   font-size: 20px;
   display: block;
   padding-top: 5px;
+}
+
+form {
+  margin-top: 10px;
+}
+form .button-elimina-show {
+  color: #d2ac7b;
+  background: rgba(255, 99, 71, 0.5);
+  transition: 1s ease-in-out;
+  margin-bottom: 10px;
+  text-decoration: none;
+  padding: 6px 100px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 1px solid #d2ac7b;
+  margin: 0 3px;
+  transition: 1s ease-in-out;
+}
+form .button-elimina-show:hover {
+  border-radius: 50%;
+}
+form .button-elimina-show:hover {
+  color: #101927;
+  background-color: #FF0000;
 }
 
 @media screen and (min-width: 768px) {
