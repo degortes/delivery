@@ -58,6 +58,7 @@
                                                     <h2 class="mt-3 mb-3">
                                                       Sicuro di voler eliminare il ristorante?
                                                     </h2>
+                                                    <a @click="noDelete()" class=" button-ordini-index">Annulla</a>
                                                     <button class="button-elimina-show" type="submit">Elimina</button>
                                                 </div>
                                               </div>

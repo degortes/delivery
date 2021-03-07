@@ -9,7 +9,7 @@
                 <a href="{{ route('welcome') }}">
                     <div class="logo">
                         <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
-                        <span>Deliveboo</span>
+                        <span>delivery</span>
                     </div>
                 </a>
                 <div class="header-right">
@@ -24,12 +24,25 @@
                                     <li v-for="product in cartCookie" :key="product.id">@{{ product.name }} (@{{ product.quantity }})</li>
                                     <li id="no-border">Prezzo totale: <span v-cloak>@{{Math.round(totalPrice * 100)/100}} €</span></li>
                                     <a v-if="cartCookie.length != 0" href="{{ route('payments.index') }}">Paga ora</a>
-                                    <a v-if="cartCookie.length != 0" id="btn-clear" @click="clear">Svuota carrello</a>
+
+                                    <a v-if="cartCookie.length != 0" id="btn-clear" @click="restModal()">Svuota carrello</a>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
+                    <div id="restModal"class="modal">
+                        <div class="modal-content">
+                            <div class="result">
+                                <i class="fas fa-times-circle fa-9x"></i>
+                                <h2 class="mt-3 mb-3">
+                                    Sicuro di voler svuotare il carrello???
+                                </h2>
+                                <br><p @click="noDelete()" class="button-show button-modifica-show">Annulla</p>
+                                <p v-if="cartCookie.length != 0"  @click="clear(),noDelete() ">Svuota carrello</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="toggle-menu"  @click="toggleMenu()">
                         <i class="fas fa-bars"></i>
                     </div>

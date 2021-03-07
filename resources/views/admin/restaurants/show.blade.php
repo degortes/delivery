@@ -89,7 +89,20 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <form action="{{route('admin.dishes.destroy' , ['dish' => $dish->id ] )}}" method="post">
-                                    <button type="submit" name="button" class="button-show button-elimina-show"><i class="fas fa-trash-alt"></i></button>
+                                        <div id="restModal"class="modal" @click="closeModalOnWindow()">
+                                          <div class="modal-content">
+                                            <div class="result">
+                                                <i class="fas fa-times-circle fa-9x"></i>
+                                                <h2 class="mt-3 mb-3">
+                                                  Sicuro di voler eliminare il piatto??
+                                                </h2>
+                                                <br><a @click="noDelete()" class="button-show button-modifica-show">Annulla</a>
+                                                <button class="button-elimina-show" type="submit">Elimina</button>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                    <a @click="restModal()" class="button-show button-elimina-show"><i class="fas fa-trash-alt"></i></a>
                                     @csrf
                                     @method('DELETE')
                                     </form>

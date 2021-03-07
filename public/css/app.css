@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "RocknRoll One", sans-serif;
 }
 
 a {
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 .btn-go-up:hover {
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
 }
 .btn-go-up i {
   font-size: 30px;
@@ -93,22 +93,13 @@ header.active::after {
   background: #040e10;
 }
 header .wp-header {
-  background: url("/images/italian-mediterranean.jpg");
-  height: 50vh;
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpipoolnet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fdh-bg-home-1.jpg&f=1&nofb=1");
+  height: 60vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 0 -540px;
+  background-position: center;
   background-repeat: no-repeat;
   position: relative;
-}
-header .filter {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 header #menu-fixed {
   width: 100%;
@@ -119,8 +110,7 @@ header #menu-fixed {
 }
 header #menu-fixed.sticky {
   transition: 400ms ease;
-  box-shadow: 0px 15px 10px -15px #111;
-  background-image: linear-gradient(45deg, #032d35, #199cb7);
+  background-image: linear-gradient(to top left, #21474e00, #d0eb99 42%, #00ccbc 60%);
 }
 header #menu-fixed.sticky a {
   color: #fff;
@@ -150,13 +140,13 @@ header .header-log-in .logo img {
 }
 header .header-log-in .logo span {
   display: none;
-  color: #d2ac7b;
-  font-family: "Ballet", cursive;
+  color: #fff;
+  text-shadow: 7px 1px 13px #ffc107, -6px 4px 5px #458282;
+  font-family: "RocknRoll One", sans-serif;
   font-size: 30px;
   letter-spacing: 3px;
   margin-left: 10px;
   margin-top: 20px;
-  font-weight: bold;
 }
 header .header-log-in .header-right {
   max-width: 100%;
@@ -324,7 +314,7 @@ header .header-top .toggle-menu i {
 }
 .menu-mobile .nav-menu-mobile .links > a {
   display: inline-block;
-  color: #d2ac7b;
+  color: #f8ce2a;
   padding: 20px;
   font-size: 16px;
   letter-spacing: 0.1rem;
@@ -332,7 +322,7 @@ header .header-top .toggle-menu i {
   text-transform: uppercase;
 }
 .menu-mobile .nav-menu-mobile .links > a:hover {
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   color: #fff;
   transition: 1s;
 }
@@ -341,7 +331,7 @@ header .header-top .toggle-menu i {
   text-align: center;
 }
 .menu-mobile .nav-menu-mobile ul li:hover {
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   color: #fff;
   transition: 1s;
 }
@@ -352,7 +342,7 @@ header .header-top .toggle-menu i {
 .menu-mobile .nav-menu-mobile ul li a {
   display: inline-block;
   padding: 20px 60px;
-  color: #d2ac7b;
+  color: #f8ce2a;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -389,6 +379,7 @@ header.active .menu-mobile {
 }
 
 .text-header {
+  width: 100%;
   position: absolute;
   z-index: 3;
   top: 30%;
@@ -396,7 +387,8 @@ header.active .menu-mobile {
   transform: translate(-50%, -50%);
 }
 .text-header .principal-text {
-  width: 100vw;
+  width: 100%;
+  text-shadow: 7px 1px 13px #ffeb3b, -6px 4px 5px #458282;
   color: white;
   text-align: center;
   padding: 15px;
@@ -418,6 +410,7 @@ header.active .menu-mobile {
   header .header-log-in {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   header .header-log-in .header-right {
@@ -435,7 +428,8 @@ header.active .menu-mobile {
   }
 
   header .header-log-in .logo span {
-    font-size: 50px;
+    margin-top: 0px;
+    font-size: 40px;
   }
 
   .principal-text {
@@ -470,13 +464,13 @@ header.active .menu-mobile {
   }
 
   header .text-header .principal-text {
-    font-size: 95px;
+    font-size: 70px;
   }
 }
 @media screen and (min-width: 1024px) {
   header .text-header .principal-text {
-    font-size: 110px;
-    padding-top: 366px;
+    font-size: 90px;
+    padding-top: 250px;
   }
 }
 .wp-header-dashboard {
@@ -485,13 +479,14 @@ header.active .menu-mobile {
 }
 
 .how-to-order {
+  color: white;
+  text-shadow: 7px 1px 13px #ffeb3b, -6px 4px 5px #458282;
   width: 100%;
   height: auto;
-  background-image: linear-gradient(45deg, #032d35, #199cb7);
-  color: #d2ac7b;
+  background-image: linear-gradient(45deg, #00ccbc, #d4d6642e);
   text-align: center;
-  border-top: 1px solid #d2ac7b;
-  border-bottom: 1px solid #d2ac7b;
+  border-top: 1px solid #f8ce2a;
+  border-bottom: 1px solid #f8ce2a;
   padding: 50px 0;
 }
 .how-to-order h1 {
@@ -509,20 +504,24 @@ header.active .menu-mobile {
   align-items: center;
 }
 .how-to-order .steps .step {
-  margin: 30px 0;
+  padding: 5px;
+  margin: 30px 0px;
 }
 .how-to-order .steps .step img {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
 }
 .how-to-order .steps .step h5 {
   font-size: 21px;
 }
 
 .card-category {
-  background-color: #ffffff;
-  color: #d2ac7b;
+  color: #0f537b;
+  text-shadow: 7px 1px 13px #ffeb3b, -6px 4px 5px #458282;
 }
 .card-category .container-card-category {
   display: flex;
@@ -530,10 +529,10 @@ header.active .menu-mobile {
   justify-content: center;
 }
 .card-category .container-card-category .menu-filter {
-  background-image: url("/images/marmo.jpg");
+  background-color: red;
   padding: 50px 15px;
-  border-bottom: 1px solid #d2ac7b;
-  border-top: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
+  border-top: 1px solid #f8ce2a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -559,10 +558,10 @@ header.active .menu-mobile {
 .card-category .container-card-category .menu-filter .selection .labelcontainer {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 5px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -584,21 +583,21 @@ header.active .menu-mobile {
   border-radius: 4px;
 }
 .card-category .container-card-category .menu-filter .selection .labelcontainer input:checked ~ .checkmark {
-  color: black;
-  background-color: gold;
+  color: white;
+  background-image: linear-gradient(45deg, #00ccbc, #d4d6642e);
   display: inline-block;
   text-align: center;
   height: 50px;
   line-height: 30px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .card-category .container-card-category .container-card {
   margin: auto;
 }
 .card-category .container-card-category .container-card h1 {
   text-align: center;
-  color: #d2ac7b;
+  color: #0f537b;
   font-size: 36px;
 }
 .card-category .container-card-category .container-card .cards {
@@ -607,14 +606,14 @@ header.active .menu-mobile {
   flex-wrap: wrap;
 }
 .card-category .container-card-category .container-card .cards .card {
-  margin: 100px 15px;
+  background-image: linear-gradient(45deg, #00ccbc1f, #cdff6a47);
+  border-radius: 8px;
+  margin: 50px 15px;
   min-width: 250px;
   min-height: 150px;
-  max-width: 400px;
-  max-height: 270px;
-  position: relative;
+  max-width: 360px;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   position: relative;
 }
 .card-category .container-card-category .container-card .cards .card a {
@@ -622,19 +621,21 @@ header.active .menu-mobile {
   height: 100%;
   text-decoration: none;
   text-align: center;
-  color: #d2ac7b;
-  display: inline-block;
+  color: #0f537b;
+  display: flex;
+  flex-direction: column;
 }
 .card-category .container-card-category .container-card .cards .card a img {
+  border-radius: 8px 8px 0 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
 }
 .card-category .container-card-category .container-card .cards .card a p {
   font-size: 23px;
-  margin-top: 5px;
+  margin: 5px;
   padding-bottom: 13px;
 }
 .card-category .container-card-category .container-card .cards .card .card-restaurant-details {
@@ -642,7 +643,7 @@ header.active .menu-mobile {
   height: 0%;
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   position: absolute;
   top: 0;
   left: 0;
@@ -663,9 +664,10 @@ header.active .menu-mobile {
   margin-top: 5px;
 }
 .card-category .container-card-category .container-card .cards .card .card-restaurant-details .see-restaurant a {
+  color: white;
   display: inline-block;
   padding: 10px;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   background-color: #333;
   transition: all 0.5s ease-in-out;
 }
@@ -677,6 +679,18 @@ header.active .menu-mobile {
 .card-category .container-card-category .container-card .cards .card:hover .card-restaurant-details {
   opacity: 1;
   height: 100%;
+}
+
+.selecty {
+  position: fixed;
+  top: 97px;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  overflow-x: auto;
+  background-color: #ffffffbf;
 }
 
 @media screen and (min-width: 480px) {
@@ -761,7 +775,7 @@ footer .container-contact {
   margin-bottom: 20px;
 }
 footer .container-contact h5 {
-  color: #d2ac7b;
+  color: #f8ce2a;
   margin: 10px 0;
 }
 footer .container-contact li {
@@ -776,7 +790,7 @@ footer .container-social-online .logo {
 }
 footer .container-social-online .logo h1 {
   font-family: "Ballet", cursive;
-  color: #d2ac7b;
+  color: #f8ce2a;
   font-weight: 700;
 }
 footer .container-social-online h2, footer .container-social-online .container-social .social {
@@ -929,7 +943,7 @@ footer .store {
 .card-login {
   width: 90%;
   margin: auto;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 10px;
   background-color: #fff;
   position: absolute;
@@ -942,7 +956,7 @@ footer .store {
   font-size: 60px;
   margin: 20px 0 20px 0;
   text-align: center;
-  color: #d2ac7b;
+  color: #f8ce2a;
   font-family: "Ballet", cursive;
 }
 .card-login .card-body-login {
@@ -956,7 +970,7 @@ footer .store {
   font-size: 18px;
   width: 100%;
   height: 40px;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 5px;
   padding-left: 10px;
 }
@@ -964,7 +978,7 @@ footer .store {
   font-size: 18px;
   width: 100% !important;
   height: 40px !important;
-  border: 1px solid #d2ac7b !important;
+  border: 1px solid #f8ce2a !important;
   border-radius: 5px !important;
 }
 
@@ -980,16 +994,16 @@ footer .store {
 .container-button-login .button-login {
   font-size: 20px;
   padding: 5px 20px;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   color: #fff;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 .container-button-login .button-login:hover {
   background-color: #fff;
-  color: #d2ac7b;
+  color: #f8ce2a;
   letter-spacing: 3px;
 }
 
@@ -1005,7 +1019,7 @@ footer .store {
 }
 .forgot-password a:hover {
   text-decoration: underline;
-  color: #d2ac7b;
+  color: #f8ce2a;
   letter-spacing: 3px;
 }
 
@@ -1067,7 +1081,7 @@ footer .store {
 .card-register {
   width: 70%;
   margin: auto;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 10px;
   background-color: #fff;
   position: absolute;
@@ -1081,7 +1095,7 @@ footer .store {
   font-size: 60px;
   margin: 20px 0 20px 0;
   text-align: center;
-  color: #d2ac7b;
+  color: #f8ce2a;
   font-family: "Ballet", cursive;
   letter-spacing: 1px;
 }
@@ -1101,7 +1115,7 @@ footer .store {
   font-size: 18px;
   width: 100%;
   height: 40px;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 5px;
   padding-left: 10px;
 }
@@ -1113,16 +1127,16 @@ footer .store {
 .form-group .container-button-register .button-register {
   font-size: 20px;
   padding: 5px 20px;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   color: #fff;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 .form-group .container-button-register .button-register:hover {
   background-color: #fff;
-  color: #d2ac7b;
+  color: #f8ce2a;
   letter-spacing: 3px;
 }
 
@@ -1164,7 +1178,7 @@ footer .store {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-index .dashboard-header-restaurant-index h1 {
   color: #e3e8f1;
@@ -1184,7 +1198,7 @@ footer .store {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li {
   list-style-type: none;
@@ -1197,7 +1211,7 @@ footer .store {
   transition: 0.5s ease-in-out;
 }
 .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 
 .dashboard-body-content-restaurant-index {
@@ -1222,7 +1236,7 @@ footer .store {
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
   flex-basis: 100%;
-  border: 5px ridge #d2ac7b;
+  border: 5px ridge #f8ce2a;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
@@ -1256,7 +1270,7 @@ footer .store {
   background: rgba(65, 105, 255, 0.5);
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .container-button-action-index-start .button-dettagli-index:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background-color: #0000FF;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .container-button-action-index-center {
@@ -1267,7 +1281,7 @@ footer .store {
   background: rgba(50, 205, 50, 0.5);
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .container-button-action-index-center .button-ordini-index:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background-color: #008000;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .container-button-action-index-end {
@@ -1278,7 +1292,7 @@ footer .store {
   background: rgba(176, 196, 222, 0.5);
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .container-button-action-index-end .button-modifica-index:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background-color: #708090;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .button-index {
@@ -1287,7 +1301,7 @@ footer .store {
   text-decoration: none;
   font-size: 15px;
   font-weight: 700;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 10px;
   width: 50%;
   text-align: center;
@@ -1297,7 +1311,7 @@ footer .store {
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .button-index:hover {
   border-radius: 50%;
   border: 1px solid #422e20;
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .body-restaurant-card-index .details-restaurant-card-index {
   padding: 5px 0;
@@ -1319,7 +1333,7 @@ form {
   margin-top: 10px;
 }
 form .button-elimina-show {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background: rgba(255, 99, 71, 0.5);
   transition: 1s ease-in-out;
   margin-bottom: 10px;
@@ -1328,7 +1342,7 @@ form .button-elimina-show {
   display: inline-block;
   border-radius: 10px;
   font-size: 20px;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   margin: 0 3px;
   transition: 1s ease-in-out;
 }
@@ -1351,14 +1365,14 @@ form .button-elimina-show:hover {
   }
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
     background-color: #101927;
-    border-right: 1px solid #d2ac7b;
+    border-right: 1px solid #f8ce2a;
     height: 100%;
     flex-basis: 40%;
     display: block;
     border-bottom: 0;
   }
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li {
-    border-bottom: 1px solid #d2ac7b;
+    border-bottom: 1px solid #f8ce2a;
     padding: 15px;
   }
   .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
@@ -1464,7 +1478,7 @@ form .button-elimina-show:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-create .dashboard-header-restaurant-create h1 {
   color: #e3e8f1;
@@ -1484,7 +1498,7 @@ form .button-elimina-show:hover {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li {
   list-style-type: none;
@@ -1497,7 +1511,7 @@ form .button-elimina-show:hover {
   transition: 0.5s ease-in-out;
 }
 .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
   background-image: url("/images/jumbo.jpg");
@@ -1512,7 +1526,7 @@ form .button-elimina-show:hover {
   width: 95%;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create .card-title-restaurant-create {
   text-align: center;
@@ -1538,7 +1552,7 @@ form .button-elimina-show:hover {
   width: 100%;
   border-radius: 5px;
   background-color: #101927;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   color: #fff;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create {
@@ -1546,7 +1560,7 @@ form .button-elimina-show:hover {
   font-size: 14px;
   border-radius: 5px;
   background-color: #101927;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   color: #fff;
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-category-restaurant-create input {
@@ -1566,7 +1580,7 @@ form .button-elimina-show:hover {
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create .content-form-file-restaurant-create input {
   background-color: #101927;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   border-radius: 5px;
   width: 100%;
 }
@@ -1574,7 +1588,7 @@ form .button-elimina-show:hover {
   background: #fff;
   color: #101927;
   text-transform: uppercase;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   padding: 10px;
   border-radius: 10px;
   font-weight: 700;
@@ -1585,7 +1599,7 @@ form .button-elimina-show:hover {
 }
 .dashboard-restaurant-create .dashboard-body-content-restaurant-create .card-form-restaurant-create form .content-form-restaurant-create button:hover {
   color: #fff;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   letter-spacing: 3px;
 }
 
@@ -1600,14 +1614,14 @@ form .button-elimina-show:hover {
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
     background-color: #101927;
-    border-right: 1px solid #d2ac7b;
+    border-right: 1px solid #f8ce2a;
     height: 100%;
     flex-basis: 40%;
     display: block;
     border-bottom: 0;
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li {
-    border-bottom: 1px solid #d2ac7b;
+    border-bottom: 1px solid #f8ce2a;
     padding: 15px;
   }
   .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
@@ -1761,7 +1775,7 @@ form .button-elimina-show:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-show .dashboard-header-restaurant-show a {
   text-decoration: none;
@@ -1788,7 +1802,7 @@ form .button-elimina-show:hover {
 .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li {
   list-style-type: none;
   padding: 15px 10px;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
   color: #e3e8f1;
@@ -1797,7 +1811,7 @@ form .button-elimina-show:hover {
   transition: 0.5s ease-in-out;
 }
 .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 
 .dashboard-body-content-restaurant-show {
@@ -1826,7 +1840,7 @@ form .button-elimina-show:hover {
   align-items: center;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show .container-title-restaurant-show .title-restaurant-show {
-  border: 5px ridge #d2ac7b;
+  border: 5px ridge #f8ce2a;
   background: rgba(255, 255, 255, 0.5);
   padding: 20px 10px;
   width: 95%;
@@ -1859,7 +1873,7 @@ form .button-elimina-show:hover {
   text-transform: uppercase;
   border-radius: 10px;
   color: #e3e8f1;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   font-size: 13px;
   font-weight: 700;
   width: 60%;
@@ -1876,7 +1890,7 @@ form .button-elimina-show:hover {
   transition: 1s ease-in-out;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show .container-title-restaurant-show .button-create-order .button-create-new-show:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background-color: #000080;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show .container-title-restaurant-show .button-create-order .button-order-new-show {
@@ -1887,14 +1901,14 @@ form .button-elimina-show:hover {
   transition: 1s ease-in-out;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show .container-title-restaurant-show .button-create-order .button-order-new-show:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background-color: #008000;
 }
 
 .your-dishes {
   background-color: #101927;
-  border-top: 1px solid #d2ac7b;
-  border-bottom: 1px solid #d2ac7b;
+  border-top: 1px solid #f8ce2a;
+  border-bottom: 1px solid #f8ce2a;
   text-align: center;
   padding: 20px 0;
 }
@@ -1914,7 +1928,7 @@ form .button-elimina-show:hover {
 }
 .container-card-restaurant-show .restaurants-show .restaurant-card-show {
   flex-basis: 95%;
-  border: 5px ridge #d2ac7b;
+  border: 5px ridge #f8ce2a;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   margin: 20px 5px;
@@ -1936,7 +1950,7 @@ form .button-elimina-show:hover {
   text-transform: uppercase;
   padding: 10px 0;
   font-size: 20px;
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 .container-card-restaurant-show .restaurants-show .details-restaurant-card-show {
   padding: 10px 0;
@@ -1951,7 +1965,7 @@ form .button-elimina-show:hover {
   display: inline-block;
   border-radius: 10px;
   font-size: 20px;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   margin: 0 3px;
   transition: 1s ease-in-out;
 }
@@ -1959,7 +1973,7 @@ form .button-elimina-show:hover {
   border-radius: 50%;
 }
 .container-card-restaurant-show .restaurants-show .container-button-action-show .button-dettagli-show {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background: rgba(65, 105, 255, 0.5);
   transition: 1s ease-in-out;
 }
@@ -1968,7 +1982,7 @@ form .button-elimina-show:hover {
   background-color: #00FFFF;
 }
 .container-card-restaurant-show .restaurants-show .container-button-action-show .button-modifica-show {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background: rgba(144, 238, 144, 0.5);
   transition: 1s ease-in-out;
 }
@@ -1980,7 +1994,7 @@ form .button-elimina-show:hover {
   display: inline-block;
 }
 .container-card-restaurant-show .restaurants-show .container-button-action-show form .button-elimina-show {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background: rgba(255, 99, 71, 0.5);
   transition: 1s ease-in-out;
 }
@@ -2009,14 +2023,14 @@ form .button-elimina-show:hover {
   }
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show {
     background-color: #101927;
-    border-right: 1px solid #d2ac7b;
+    border-right: 1px solid #f8ce2a;
     height: 100%;
     flex-basis: 40%;
     display: block;
     border-bottom: 0;
   }
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li {
-    border-bottom: 1px solid #d2ac7b;
+    border-bottom: 1px solid #f8ce2a;
     padding: 15px;
   }
   .dashboard-restaurant-show .dashboard-body-restaurant-show .dashboard-body-menu-restaurant-show ul li a {
@@ -2179,7 +2193,7 @@ form .button-elimina-show:hover {
 .dashboard-restaurant-edit .dashboard-header-restaurant-edit {
   background-color: #101927;
   padding: 10px;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
   color: #e3e8f1;
@@ -2196,7 +2210,7 @@ form .button-elimina-show:hover {
   background-color: #101927;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li {
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
   padding: 15px;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
@@ -2205,7 +2219,7 @@ form .button-elimina-show:hover {
   text-decoration: none;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
   background-image: url("/images/ristorante-black.jpg");
@@ -2219,7 +2233,7 @@ form .button-elimina-show:hover {
   margin: 50px auto;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit .card-title-restaurant-edit {
   text-align: center;
@@ -2243,10 +2257,10 @@ form .button-elimina-show:hover {
   width: 100%;
   border-radius: 5px;
   background-color: #e3e8f1;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-file-restaurant-edit figure {
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -2259,7 +2273,7 @@ form .button-elimina-show:hover {
   margin: 10px 0;
   border-radius: 5px;
   background-color: #e3e8f1;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-category-restaurant-edit input {
   border: 1px solid #101927;
@@ -2277,7 +2291,7 @@ form .button-elimina-show:hover {
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .content-form-control-file-restaurant-edit input {
   background-color: #e3e8f1;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 5px;
   width: 100%;
 }
@@ -2285,7 +2299,7 @@ form .button-elimina-show:hover {
   background: rgba(255, 255, 255, 0.9);
   color: #101927;
   text-transform: uppercase;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   padding: 20px;
   margin: 10px 0 20px 0;
   border-radius: 10px;
@@ -2295,7 +2309,7 @@ form .button-elimina-show:hover {
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit form .content-form-restaurant-edit .button-edit:hover {
   color: #fff;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   letter-spacing: 2px;
 }
 
@@ -2313,7 +2327,7 @@ form .button-elimina-show:hover {
     height: calc(100vh - 97px - 52px);
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
-    border-right: 1px solid #d2ac7b;
+    border-right: 1px solid #f8ce2a;
     flex-basis: 20%;
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
@@ -2457,7 +2471,7 @@ form .button-elimina-show:hover {
   background-image: url("/images/delicious-kebab.jpg");
   background-size: cover;
   background-position: center;
-  border-top: 5px solid #d2ac7b;
+  border-top: 5px solid #f8ce2a;
   height: calc(100vh - 97px);
   overflow-y: scroll;
 }
@@ -2468,7 +2482,7 @@ form .button-elimina-show:hover {
   width: 90%;
   margin: auto;
   background: rgba(255, 255, 255, 0.6);
-  border: 5px ridge #d2ac7b;
+  border: 5px ridge #f8ce2a;
   border-radius: 10px;
   padding: 10px;
 }
@@ -2495,7 +2509,7 @@ form .button-elimina-show:hover {
   display: block;
   width: 100%;
   border-radius: 5px;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   height: 30px;
 }
 .list-edit-plate .textarea {
@@ -2507,14 +2521,14 @@ form .button-elimina-show:hover {
 .list-edit-plate .input-search {
   background-color: white;
   color: black;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 5px;
   margin: 5px 0;
   width: 100%;
 }
 .list-edit-plate figure .img-edit-plate {
   max-width: 100%;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 20%;
   display: block;
   margin: auto;
@@ -2530,12 +2544,12 @@ form .button-elimina-show:hover {
   font-size: 20px;
   background-color: #101927;
   padding: 10px 20px;
-  color: #d2ac7b;
+  color: #f8ce2a;
   cursor: pointer;
 }
 .button-edit-plate button:hover {
   color: #101927;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
 }
 
 @media screen and (min-width: 768px) {
@@ -2720,11 +2734,11 @@ form .button-elimina-show:hover {
 }
 .container-restaurant-orders-details .title-restaurant-orders-details {
   background-color: #101927;
-  border-bottom: 3px solid #d2ac7b;
+  border-bottom: 3px solid #f8ce2a;
 }
 .container-restaurant-orders-details .title-restaurant-orders-details h1 {
   text-align: center;
-  color: #d2ac7b;
+  color: #f8ce2a;
   font-size: 25px;
   padding: 20px 0;
   text-transform: uppercase;
@@ -2751,8 +2765,8 @@ form .button-elimina-show:hover {
 .container-restaurant-orders-details .container-form-details .link-details-order .link-statistics-details-orders {
   font-size: 25px;
   text-decoration: none;
-  color: #d2ac7b;
-  border: 3px solid #d2ac7b;
+  color: #f8ce2a;
+  border: 3px solid #f8ce2a;
   border-radius: 10px;
   display: inline-block;
   padding: 25px 40px;
@@ -2771,8 +2785,8 @@ form .button-elimina-show:hover {
 .container-restaurant-orders-details .container-form-details .link-details-order a {
   font-size: 20px;
   text-decoration: none;
-  color: #d2ac7b;
-  border: 3px solid #d2ac7b;
+  color: #f8ce2a;
+  border: 3px solid #f8ce2a;
   border-radius: 10px;
   display: inline-block;
   padding: 10px;
@@ -2791,7 +2805,7 @@ form .button-elimina-show:hover {
   align-items: center;
 }
 .container-restaurant-orders-details .container-form-details .container-form-details-orders .form-details-orders {
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   width: 90%;
@@ -2865,7 +2879,7 @@ form .button-elimina-show:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-dishes-show .dashboard-header-dishes-show a {
   text-decoration: none;
@@ -2892,7 +2906,7 @@ form .button-elimina-show:hover {
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li {
   list-style-type: none;
   padding: 15px 10px;
-  border-bottom: 1px solid #d2ac7b;
+  border-bottom: 1px solid #f8ce2a;
 }
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
   color: #e3e8f1;
@@ -2901,7 +2915,7 @@ form .button-elimina-show:hover {
   transition: 0.5s ease-in-out;
 }
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
 }
 
 .dashboard-body-content-dishes-show {
@@ -2930,7 +2944,7 @@ form .button-elimina-show:hover {
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
   flex-basis: 90%;
   background: rgba(255, 255, 255, 0.8);
-  border: 5px ridge #d2ac7b;
+  border: 5px ridge #f8ce2a;
   border-radius: 10px;
   margin: 50px auto;
   padding: 10px;
@@ -2975,14 +2989,14 @@ form .button-elimina-show:hover {
   }
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
     background-color: #101927;
-    border-right: 1px solid #d2ac7b;
+    border-right: 1px solid #f8ce2a;
     height: 100%;
     flex-basis: 40%;
     display: block;
     border-bottom: 0;
   }
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li {
-    border-bottom: 1px solid #d2ac7b;
+    border-bottom: 1px solid #f8ce2a;
     padding: 15px;
   }
   .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
@@ -3061,7 +3075,7 @@ form .button-elimina-show:hover {
 .container-general-create {
   background-image: url("/images/pizza-sfondo.jpg");
   background-size: cover;
-  border-top: 1px solid #d2ac7b;
+  border-top: 1px solid #f8ce2a;
 }
 .container-general-create .container-general-create-plate {
   padding: 100px 0;
@@ -3073,7 +3087,7 @@ form .button-elimina-show:hover {
   width: 90%;
   margin: auto;
   background: rgba(255, 255, 255, 0.6);
-  border: 5px ridge #d2ac7b;
+  border: 5px ridge #f8ce2a;
   border-radius: 10px;
   padding: 10px;
 }
@@ -3100,7 +3114,7 @@ form .button-elimina-show:hover {
   display: block;
   width: 100%;
   border-radius: 5px;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   height: 30px;
 }
 .list-plate .textarea {
@@ -3112,7 +3126,7 @@ form .button-elimina-show:hover {
 .list-plate .input-search {
   background-color: white;
   color: black;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 5px;
   margin: 5px 0;
   width: 100%;
@@ -3128,13 +3142,13 @@ form .button-elimina-show:hover {
   font-size: 20px;
   background-color: #101927;
   padding: 10px 30px;
-  color: #d2ac7b;
+  color: #f8ce2a;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
 .button-create-plate button:hover {
   color: #101927;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   letter-spacing: 2px;
 }
 
@@ -3183,8 +3197,8 @@ main {
   background-color: white;
 }
 main .how-to-order {
-  border-top: 1px solid #d2ac7b;
-  border-bottom: 2px solid #d2ac7b;
+  border-top: 1px solid #f8ce2a;
+  border-bottom: 2px solid #f8ce2a;
 }
 main .container-restaurant {
   background-image: url("/images/marmo.jpg");
@@ -3194,7 +3208,7 @@ main .container-restaurant {
 main .container-restaurant .content-restaurant h1 {
   text-align: center;
   text-transform: uppercase;
-  color: #d2ac7b;
+  color: #f8ce2a;
   padding: 100px 0 40px 0;
   font-size: 45px;
 }
@@ -3240,6 +3254,7 @@ main .container-restaurant .container-list-dishes .card-dish .wp-img-card-dish {
   width: 100%;
 }
 main .container-restaurant .container-list-dishes .card-dish .wp-img-card-dish img {
+  max-height: 240px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -3301,7 +3316,7 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
 }
 .container-fluid .row .fa-minus-square:hover,
 .container-fluid .row .fa-plus-square:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   cursor: pointer;
 }
 .container-fluid .row label {
@@ -3324,13 +3339,13 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   width: 150px;
 }
 .message-container .btn {
-  color: #d2ac7b;
-  border: 1px solid #d2ac7b;
+  color: #f8ce2a;
+  border: 1px solid #f8ce2a;
   margin-top: 20px;
 }
 .message-container .btn:hover {
   color: #ffffff;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
 }
 
 /* The Modal (background) */
@@ -3414,7 +3429,7 @@ div i.fas.fa-times-circle {
   margin: auto;
   border: 8px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 8px solid #d2ac7b;
+  border-top: 8px solid #f8ce2a;
   width: 200px;
   height: 200px;
   -webkit-animation: spin 2s linear infinite;
@@ -3487,7 +3502,7 @@ div i.fas.fa-times-circle {
 
 .contact-developer {
   border-radius: 3px;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   border-radius: 6px;
   background-color: white;
   text-align: center;
@@ -3520,7 +3535,7 @@ div i.fas.fa-times-circle {
   font-size: 26px;
 }
 .contact-developer h4 {
-  color: #d2ac7b;
+  color: #f8ce2a;
   font-size: 20px;
   padding-top: 18px;
   padding-bottom: 8px;
@@ -3623,7 +3638,7 @@ div i.fas.fa-times-circle {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  border: 3px solid #d2ac7b;
+  border: 3px solid #f8ce2a;
   width: 95%;
   margin: auto;
   padding: 0 20px;
@@ -3634,7 +3649,7 @@ div i.fas.fa-times-circle {
   font-size: 40px;
   margin: 35px 0;
   text-align: center;
-  color: #d2ac7b;
+  color: #f8ce2a;
   font-family: "Ballet", cursive;
 }
 
@@ -3655,7 +3670,7 @@ div i.fas.fa-times-circle {
   height: 30px;
   margin: 10px 0 15px;
   border-radius: 5px;
-  border: 2px solid #d2ac7b;
+  border: 2px solid #f8ce2a;
 }
 
 .container-button-recovery-password {
@@ -3669,14 +3684,14 @@ div i.fas.fa-times-circle {
   padding: 10px;
   border-radius: 10px;
   color: white;
-  background-color: #d2ac7b;
+  background-color: #f8ce2a;
   border: none;
   transition: all 0.5s ease-in-out;
 }
 .container-button-recovery-password .button-recovery-password:hover {
-  color: #d2ac7b;
+  color: #f8ce2a;
   background-color: white;
-  border: 1px solid #d2ac7b;
+  border: 1px solid #f8ce2a;
   letter-spacing: 2px;
 }
 

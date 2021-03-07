@@ -55,6 +55,7 @@
             </div>
             <p class="product__description">@{{ product.description }}</p>
             <p class="">Prezzo: @{{ product.price }} €</p>
+            <p class="">Ingredienti: @{{ product.ingredients }}</p>
 
             <div class="cart" v-if="product.visibility">
                 <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>

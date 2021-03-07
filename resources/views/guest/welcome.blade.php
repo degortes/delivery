@@ -3,25 +3,25 @@
 @section('content')
 
   <section class="how-to-order">
-    <h1>
+    <h1 id="first">
       Come ordinare:
     </h1>
-    <div class="steps">
+    <div class="steps" >
       <div class="step">
         <img src="{{url('/images/menu.png')}}" alt="">
-        <h5>
+        <h5 id="second">
           1. Scegli il ristorante
         </h5>
       </div>
-      <div class="step">
+      <div class="step" >
         <img src="{{url('/images/order-food.png')}}" alt="">
-        <h5>
+        <h5 id="third">
           2. Seleziona i tuoi piatti preferiti
         </h5>
       </div>
       <div class="step">
         <img src="{{url('/images/food-delivery.png')}}" alt="">
-        <h5>
+        <h5 id="wait">
           3. Attendi la consegna
         </h5>
       </div>
@@ -31,8 +31,8 @@
   <section class="card-category">
       <div class="container-card-category">
           <div class="menu-filter">
-              <h3 class="ricerca-avanzata">Seleziona una o più categorie</h3>
-              <div class="selection">
+              <h3 id="author" class="ricerca-avanzata">Seleziona una o più categorie</h3>
+              <div class="selection" id="selection">
                     @foreach ($categories as $category)
                         <div class="form-check">
                             <label class="labelcontainer">
