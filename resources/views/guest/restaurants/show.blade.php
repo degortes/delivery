@@ -28,7 +28,7 @@
       </div>
     </section>
     <div class="container-restaurant">
-      <div class="content-restaurant">
+      <div class="content-restaurant" id="dishsearch">
             <h1>
               {{$restaurant->name}}
             </h1>

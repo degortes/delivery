@@ -91,7 +91,6 @@
 
         .restaurant-card-index {
 
-            flex-basis: 100%;
             border: 5px ridge $gold;
             border-radius: 10px;
             margin: 10px;
@@ -267,9 +266,9 @@ form {
 
 
 @media screen and (min-width: 768px){
-
-    .dashboard-restaurant-index {
-
+//
+//     .dashboard-restaurant-index {
+//
         .dashboard-header-restaurant-index {
 
 
@@ -279,87 +278,87 @@ form {
                 padding: 14px 10px;
             }
         }
-
-        .dashboard-body-restaurant-index {
-
-            display: flex;
-            height: calc(100vh - 97px - 60px);
-
-            .dashboard-body-menu-restaurant-index {
-
-                background-color: #101927;
-                border-right: 1px solid $gold;
-                height: 100%;
-                flex-basis: 40%;
-                display: block;
-                border-bottom: 0;
-
-                ul {
-
-
-                    li {
-
-                        border-bottom: 1px solid $gold;
-                        padding: 15px;
-
-
-                        a{
-
-                            font-size: 23px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .dashboard-body-content-restaurant-index{
-
-
-
-        .container-restaurant-index {
-
-
-
-            .title-restaurant-index {
-
-                margin: 20px 0;
-
-                h1 {
-                    font-size: 35px;
-                }
-            }
-        }
-
-        .restaurants-index {
-
-            justify-content: center;
-
-
+//
+//         .dashboard-body-restaurant-index {
+//
+//             display: flex;
+//             height: calc(100vh - 97px - 60px);
+//
+//             .dashboard-body-menu-restaurant-index {
+//
+//                 background-color: #101927;
+//                 border-right: 1px solid $gold;
+//                 height: 100%;
+//                 flex-basis: 40%;
+//                 display: block;
+//                 border-bottom: 0;
+//
+//                 ul {
+//
+//
+//                     li {
+//
+//                         border-bottom: 1px solid $gold;
+//                         padding: 15px;
+//
+//
+//                         a{
+//
+//                             font-size: 23px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//
+//     .dashboard-body-content-restaurant-index{
+//
+//
+//
+//         .container-restaurant-index {
+//
+//
+//
+//             .title-restaurant-index {
+//
+//                 margin: 20px 0;
+//
+//                 h1 {
+//                     font-size: 35px;
+//                 }
+//             }
+//         }
+//
+//         .restaurants-index {
+//
+//             justify-content: center;
+//
+//
             .restaurant-card-index {
 
-                flex-basis: 60%;
-
-
-
-                .action-restaurant-card-index {
-
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-
-
-                    .button-index {
-
-                        width: 100%;
-                        margin: 10px 5px;
-                        padding: 10px 25px;
-
-                    }
+                flex-basis: 47%;
+//
+//
+//
+//                 .action-restaurant-card-index {
+//
+//                     display: flex;
+//                     flex-direction: row;
+//                     justify-content: center;
+//
+//
+//                     .button-index {
+//
+//                         width: 100%;
+//                         margin: 10px 5px;
+//                         padding: 10px 25px;
+//
+//                     }
                 }
-            }
-        }
-    }
+//             }
+//         }
+//     }
 }
 
 
@@ -388,7 +387,7 @@ form {
             .restaurant-card-index {
 
 
-                flex-basis: 55%;
+                flex-basis: 48%;
 
                 .title-restaurant-card {
 

@@ -9,7 +9,7 @@
                 <a href="{{ route('welcome') }}">
                     <div class="logo">
                             <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
-                            <span>Deliveboo</span>
+                            <span>delivery</span>
                     </div>
                 </a>
                 <div class="header-right">
@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="menu-mobile"> 
+        <div class="menu-mobile">
             <div class="nav-menu-mobile">
                 <ul>
                     @if (Route::has('login'))

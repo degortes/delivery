@@ -92,7 +92,7 @@ header.active::before {
   left: 0;
   width: 50%;
   height: 100%;
-  background: #040e10;
+  background: #d0eb99;
 }
 header::after {
   content: "";
@@ -110,7 +110,7 @@ header.active::after {
   right: 0;
   width: 50%;
   height: 100%;
-  background: #040e10;
+  background: #d0eb99;
 }
 header .wp-header {
   background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpipoolnet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fdh-bg-home-1.jpg&f=1&nofb=1");
@@ -177,7 +177,7 @@ header .header-log-in .header-right {
 header .header-log-in .toggle-menu {
   padding: 0 20px;
   font-size: 25px;
-  color: #d2ac7b;
+  color: #00ccbc;
   cursor: pointer;
 }
 header .header-log-in .toggle-menu i {
@@ -302,7 +302,7 @@ header .header-top .nav-menu-top .cart-dropdown ul a {
 header .header-top .toggle-menu {
   padding: 0 20px;
   font-size: 25px;
-  color: #d2ac7b;
+  color: #00ccbc;
   cursor: pointer;
 }
 header .header-top .toggle-menu i {
@@ -328,7 +328,7 @@ header .header-top .toggle-menu i {
   transition-delay: 0s;
 }
 .menu-mobile .nav-menu-mobile {
-  border: 1px solid #d2ac7b;
+  border: 1px solid #00ccbc;
   width: 100%;
   height: 100%;
 }
@@ -351,7 +351,7 @@ header .header-top .toggle-menu i {
   text-align: center;
 }
 .menu-mobile .nav-menu-mobile ul li:hover {
-  background-color: #f8ce2a;
+  background-color: #00ccbc;
   color: #fff;
   transition: 1s;
 }
@@ -362,12 +362,13 @@ header .header-top .toggle-menu i {
 .menu-mobile .nav-menu-mobile ul li a {
   display: inline-block;
   padding: 20px 60px;
-  color: #f8ce2a;
+  color: #0f537b;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 25px;
   transition: all 0.5s ease-in-out;
+  text-shadow: 7px 1px 13px #ffc107, -6px 4px 5px #aaeaea;
 }
 
 header.active .menu-mobile {
@@ -495,13 +496,13 @@ header.active .menu-mobile {
   }
 }
 .wp-header-dashboard {
-  background-color: #040e10;
+  background-image: linear-gradient(to top left, #d0eb99, #d0eb99 42%, #00ccbc 60%);
   height: 97px;
 }
 
 .how-to-order {
   color: white;
-  text-shadow: 7px 1px 13px #ffeb3b, -6px 4px 5px #458282;
+  text-shadow: 0px 0px 3px #ffeb3b, -5px 4px 1px #458282;
   width: 100%;
   height: auto;
   background-image: linear-gradient(45deg, #00ccbc, #d4d6642e);
@@ -540,8 +541,8 @@ header.active .menu-mobile {
 }
 
 .card-category {
-  color: #0f537b;
-  text-shadow: 7px 1px 13px #ffeb3b, -6px 4px 5px #458282;
+  color: #00ccbc;
+  text-shadow: 0px 0px 1px #ffeb3b, 0px 0px 1px #d0ea11;
 }
 .card-category .container-card-category {
   display: flex;
@@ -603,7 +604,9 @@ header.active .menu-mobile {
   border-radius: 4px;
 }
 .card-category .container-card-category .menu-filter .selection .labelcontainer input:checked ~ .checkmark {
+  white-space: nowrap;
   color: white;
+  width: 95%;
   background-image: linear-gradient(45deg, #00ccbc, #d4d6642e);
   display: inline-block;
   text-align: center;
@@ -617,9 +620,12 @@ header.active .menu-mobile {
   padding-top: 150px;
 }
 .card-category .container-card-category .container-card h1 {
+  width: 95vw;
   text-align: center;
   color: #0f537b;
   font-size: 36px;
+  padding: 12px 0;
+  background-image: linear-gradient(to bottom right, #d0eb99, #d0eb99 42%, #00ccbc 60%);
 }
 .card-category .container-card-category .container-card .cards {
   display: flex;
@@ -715,6 +721,10 @@ header.active .menu-mobile {
 }
 
 @media screen and (min-width: 480px) {
+  .card-category .container-card-category .container-card {
+    padding-top: 50px;
+  }
+
   .how-to-order {
     margin: 0 auto;
   }
@@ -1262,7 +1272,6 @@ footer .store {
   flex-wrap: wrap;
 }
 .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
-  flex-basis: 100%;
   border: 5px ridge #f8ce2a;
   border-radius: 10px;
   margin: 10px;
@@ -1382,51 +1391,13 @@ form .button-elimina-show:hover {
 }
 
 @media screen and (min-width: 768px) {
-  .dashboard-restaurant-index .dashboard-header-restaurant-index h1 {
+  .dashboard-header-restaurant-index h1 {
     font-size: 30px;
     padding: 14px 10px;
   }
-  .dashboard-restaurant-index .dashboard-body-restaurant-index {
-    display: flex;
-    height: calc(100vh - 97px - 60px);
-  }
-  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index {
-    background-color: #101927;
-    border-right: 1px solid #f8ce2a;
-    height: 100%;
-    flex-basis: 40%;
-    display: block;
-    border-bottom: 0;
-  }
-  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li {
-    border-bottom: 1px solid #f8ce2a;
-    padding: 15px;
-  }
-  .dashboard-restaurant-index .dashboard-body-restaurant-index .dashboard-body-menu-restaurant-index ul li a {
-    font-size: 23px;
-  }
 
-  .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index {
-    margin: 20px 0;
-  }
-  .dashboard-body-content-restaurant-index .container-restaurant-index .title-restaurant-index h1 {
-    font-size: 35px;
-  }
-  .dashboard-body-content-restaurant-index .restaurants-index {
-    justify-content: center;
-  }
-  .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
-    flex-basis: 60%;
-  }
-  .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .action-restaurant-card-index .button-index {
-    width: 100%;
-    margin: 10px 5px;
-    padding: 10px 25px;
+  .restaurant-card-index {
+    flex-basis: 47%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1435,7 +1406,7 @@ form .button-elimina-show:hover {
   }
 
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index {
-    flex-basis: 55%;
+    flex-basis: 48%;
   }
   .dashboard-body-content-restaurant-index .restaurants-index .restaurant-card-index .title-restaurant-card h1 {
     font-size: 35px;
@@ -1851,7 +1822,6 @@ form .button-elimina-show:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 60%;
 }
 .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
   text-align: center;
@@ -2068,7 +2038,7 @@ form .button-elimina-show:hover {
     height: calc(100vh - 97px - 60px);
   }
   .dashboard-body-content-restaurant-show .container-restaurant-show {
-    height: 55%;
+    padding-bottom: 20px;
   }
   .dashboard-body-content-restaurant-show .container-restaurant-show .title-show {
     font-size: 30px;

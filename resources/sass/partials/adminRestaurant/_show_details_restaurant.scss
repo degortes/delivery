@@ -81,7 +81,6 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 60%;
 
         .title-show {
                 text-align: center;
@@ -399,7 +398,7 @@
         height: calc(100vh - 97px - 60px);
         .container-restaurant-show {
 
-            height: 55%;
+            padding-bottom: 20px;
 
             .title-show {
 

@@ -23,7 +23,7 @@ header{
       left: 0;
       width: 50%;
       height: 100%;
-      background: #040e10;
+      background: #d0eb99;
   }
 
   &::after{
@@ -43,7 +43,7 @@ header{
       right: 0;
       width: 50%;
       height: 100%;
-      background: #040e10;
+      background: #d0eb99;
   }
 
   .wp-header {
@@ -120,7 +120,7 @@ header{
         .toggle-menu {
             padding: 0 20px;
             font-size: 25px;
-            color: #d2ac7b;
+            color: #00ccbc;
             cursor: pointer;
         }
 
@@ -264,7 +264,7 @@ header{
         .toggle-menu {
             padding: 0 20px;
             font-size: 25px;
-            color: #d2ac7b;
+            color: #00ccbc;
             cursor: pointer;
         }
 
@@ -294,7 +294,7 @@ header{
             transition-delay: 0s;
 
             .nav-menu-mobile {
-                border: 1px solid #d2ac7b;
+                border: 1px solid #00ccbc;
                 width: 100%;
                 height: 100%;
 
@@ -320,7 +320,7 @@ header{
 
                     li {
                         &:hover {
-                            background-color: $gold;
+                            background-color: #00ccbc;
                             color: #fff;
                             transition: 1s;
                         }
@@ -333,12 +333,13 @@ header{
                         a {
                             display: inline-block;
                             padding: 20px 60px;
-                            color: $gold;
+                            color: #0f537b;
                             text-decoration: none;
                             text-transform: uppercase;
                             letter-spacing: 1px;
                             font-size: 25px;
                             transition: all 0.5s ease-in-out;
+                            text-shadow: 7px 1px 13px #ffc107, -6px 4px 5px #aaeaea;
                         }
                     }
                 }

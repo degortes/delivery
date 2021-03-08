@@ -2376,16 +2376,29 @@ var app = new Vue({
   mounted: function mounted() {
     var _this5 = this;
 
+    var $ = function $(id) {
+      return document.getElementById(id);
+    };
+
+    if ($('author')) {
+      window.addEventListener('scroll', function () {
+        var position = $('author').getBoundingClientRect();
+        var position2 = $('wait').getBoundingClientRect();
+        var position3 = $('first').getBoundingClientRect();
+        var position4 = $('second').getBoundingClientRect();
+        var position5 = $('third').getBoundingClientRect();
+
+        if (position.top >= 0 && position.bottom <= window.innerHeight || position3.top >= 0 && position3.bottom <= window.innerHeight || position4.top >= 0 && position4.bottom <= window.innerHeight || position5.top >= 0 && position5.bottom <= window.innerHeight || position2.top >= 0 && position2.bottom <= window.innerHeight) {
+          $('selection').classList.remove('selecty');
+        } else {
+          $('selection').classList.add('selecty');
+        }
+      });
+    }
+
     this.showModal();
     this.showChart();
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
-      params: {
-        query: this.selectedCategory
-      }
-    }).then(function (risposta) {
-      _this5.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
-    }); // fine then
-
+    this.searchRestaurants();
     var date = new Date();
     date.setTime(date.getTime() + 100000000 * 1000);
     Cookies.set('nome', this.nome, {
@@ -2422,26 +2435,33 @@ var app = new Vue({
     this.cognome = Cookies.get('cognome') !== 'undefined' && Cookies.get('cognome');
     this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo');
     this.selectedRestaurant = window.location.href.slice(34);
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
-      params: {
-        query: this.selectedRestaurant
-      }
-    }).then(function (risposta) {
-      // assegno ad array restaurants la risposta API
-      _this5.dishesList = risposta.data.results;
 
-      for (var i = 0; i < _this5.dishesList.length; i++) {
-        _this5.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+    var $ = function $(id) {
+      return document.getElementById(id);
+    };
 
-        if (_this5.cartCookie.length) {
-          for (var j = 0; j < _this5.cartCookie.length; j++) {
-            if (_this5.cartCookie[j].id == _this5.dishesList[i].id) {
-              _this5.dishesList[i] = _this5.cartCookie[j];
+    if ($('dishsearch')) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
+        params: {
+          query: this.selectedRestaurant
+        }
+      }).then(function (risposta) {
+        // assegno ad array restaurants la risposta API
+        _this5.dishesList = risposta.data.results;
+
+        for (var i = 0; i < _this5.dishesList.length; i++) {
+          _this5.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+
+          if (_this5.cartCookie.length) {
+            for (var j = 0; j < _this5.cartCookie.length; j++) {
+              if (_this5.cartCookie[j].id == _this5.dishesList[i].id) {
+                _this5.dishesList[i] = _this5.cartCookie[j];
+              }
             }
           }
         }
-      }
-    }); // fine then
+      }); // fine then
+    }
 
     window.document.onscroll = function () {
       var navBar = document.getElementById('menu-fixed');
@@ -2503,42 +2523,6 @@ var app = new Vue({
     }
   }
 });
-
-var $ = function $(id) {
-  return document.getElementById(id);
-};
-
-if ($('author')) {
-  window.addEventListener('scroll', function () {
-    var position = $('author').getBoundingClientRect();
-    var position2 = $('wait').getBoundingClientRect();
-    var position3 = $('first').getBoundingClientRect();
-    var position4 = $('second').getBoundingClientRect();
-    var position5 = $('third').getBoundingClientRect();
-
-    if (position.top >= 0 && position.bottom <= window.innerHeight) {
-      $('selection').classList.remove('selecty');
-    } else {
-      $('selection').classList.add('selecty');
-    }
-
-    if (position3.top >= 0 && position3.bottom <= window.innerHeight) {
-      $('selection').classList.remove('selecty');
-    }
-
-    if (position4.top >= 0 && position4.bottom <= window.innerHeight) {
-      $('selection').classList.remove('selecty');
-    }
-
-    if (position5.top >= 0 && position5.bottom <= window.innerHeight) {
-      $('selection').classList.remove('selecty');
-    }
-
-    if (position2.top >= 0 && position2.bottom <= window.innerHeight) {
-      $('selection').classList.remove('selecty');
-    }
-  });
-}
 
 /***/ }),
 

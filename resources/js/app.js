@@ -229,17 +229,32 @@ var app = new Vue({
 		this.showPayment();
 	},
 	mounted() {
+		var $ = function( id ) { return document.getElementById( id ); };
+
+		if ($('author')) {
+			window.addEventListener('scroll', function() {
+
+				var position = $('author').getBoundingClientRect();
+				var position2 = $('wait').getBoundingClientRect();
+				var position3 = $('first').getBoundingClientRect();
+				var position4 = $('second').getBoundingClientRect();
+				var position5 = $('third').getBoundingClientRect();
+
+				if ((position.top >= 0  && position.bottom <= window.innerHeight)||
+				(position3.top >= 0  && position3.bottom <= window.innerHeight )||
+				(position4.top >= 0  && position4.bottom <= window.innerHeight )||
+				(position5.top >= 0  && position5.bottom <= window.innerHeight )||
+				(position2.top >= 0  && position2.bottom <= window.innerHeight )) {
+					$('selection').classList.remove('selecty')
+				} else {
+					$('selection').classList.add('selecty')
+				}
+			});
+		}
 		this.showModal();
 		this.showChart();
-		axios
-		.get('http://localhost:8000/api/restaurants', {
-			params:{
-				query: this.selectedCategory
-			}
-		})
-		.then((risposta) =>{
-			this.restaurants = risposta.data.results; // assegno ad array restaurants la risposta API
-		}); // fine then
+		this.searchRestaurants();
+
 		var date = new Date();
 		date.setTime(date.getTime() + (100000000 * 1000));
 		Cookies.set('nome', this.nome, { expires: date })
@@ -266,26 +281,33 @@ var app = new Vue({
 		this.indirizzo = (Cookies.get('indirizzo') !== 'undefined') && Cookies.get('indirizzo')
 
 		this.selectedRestaurant = window.location.href.slice(34);
-		axios
-		.get('http://localhost:8000/api/dishes', {
-			params:{
-				query: this.selectedRestaurant
-			}
-		})
-		.then((risposta) =>{
-			// assegno ad array restaurants la risposta API
-			this.dishesList = risposta.data.results;
-			for (var i = 0; i < this.dishesList.length; i++) {
-				this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-				if (this.cartCookie.length) {
-					for (var j = 0; j < this.cartCookie.length; j++) {
-						if (this.cartCookie[j].id == this.dishesList[i].id) {
-							this.dishesList[i] = this.cartCookie[j];
+
+
+		var $ = function( id ) { return document.getElementById( id ); };
+
+		if ($('dishsearch')) {
+
+			axios
+			.get('http://localhost:8000/api/dishes', {
+				params:{
+					query: this.selectedRestaurant
+				}
+			})
+			.then((risposta) =>{
+				// assegno ad array restaurants la risposta API
+				this.dishesList = risposta.data.results;
+				for (var i = 0; i < this.dishesList.length; i++) {
+					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+					if (this.cartCookie.length) {
+						for (var j = 0; j < this.cartCookie.length; j++) {
+							if (this.cartCookie[j].id == this.dishesList[i].id) {
+								this.dishesList[i] = this.cartCookie[j];
+							}
 						}
 					}
 				}
-			}
-		}); // fine then
+			}); // fine then
+		}
 
 		window.document.onscroll = () => {
       		let navBar = document.getElementById('menu-fixed');
@@ -350,34 +372,3 @@ var app = new Vue({
 		},
 	}
 });
-
-var $ = function( id ) { return document.getElementById( id ); };
-
-if ($('author')) {
-window.addEventListener('scroll', function() {
-
-    var position = $('author').getBoundingClientRect();
-    var position2 = $('wait').getBoundingClientRect();
-    var position3 = $('first').getBoundingClientRect();
-    var position4 = $('second').getBoundingClientRect();
-    var position5 = $('third').getBoundingClientRect();
-
-    if (position.top >= 0  && position.bottom <= window.innerHeight) {
-        $('selection').classList.remove('selecty')
-    } else {
-        $('selection').classList.add('selecty')
-    }
-	if (position3.top >= 0  && position3.bottom <= window.innerHeight ) {
-		$('selection').classList.remove('selecty')
-	}
-	if (position4.top >= 0  && position4.bottom <= window.innerHeight ) {
-		$('selection').classList.remove('selecty')
-	}
-	if (position5.top >= 0  && position5.bottom <= window.innerHeight ) {
-		$('selection').classList.remove('selecty')
-	}
-	if (position2.top >= 0  && position2.bottom <= window.innerHeight ) {
-		$('selection').classList.remove('selecty')
-	}
-});
-}
