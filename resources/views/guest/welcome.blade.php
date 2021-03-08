@@ -42,6 +42,12 @@
                             </label>
                         </div>
                     @endforeach
+                    <div class="form-check">
+                        <label class="labelcontainer">
+                            <a @click="selectedCategory = [], searchRestaurants() " name="query" class="form-check-input" type="checkbox" value="Azzera" ><span class="checkmark"><i class="fas fa-trash-alt"></i></span></a>
+
+                        </label>
+                    </div>
           </div>
           <div class="container-card">
 

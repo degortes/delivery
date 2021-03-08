@@ -50,6 +50,26 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1);
 }
 
+.btn-red {
+  display: inline-block;
+  border-radius: 8px;
+  color: white;
+  padding: 15px;
+  background-color: #e6444499;
+  border: 0px;
+  font-size: 15px;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+.btn-green {
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 15px;
+  color: white;
+  padding: 15px;
+  background-color: #4eec4e91;
+}
+
 header {
   position: relative;
 }
@@ -110,7 +130,7 @@ header #menu-fixed {
 }
 header #menu-fixed.sticky {
   transition: 400ms ease;
-  background-image: linear-gradient(to top left, #21474e00, #d0eb99 42%, #00ccbc 60%);
+  background-image: linear-gradient(to top left, #d0eb99, #d0eb99 42%, #00ccbc 60%);
 }
 header #menu-fixed.sticky a {
   color: #fff;
@@ -430,6 +450,7 @@ header.active .menu-mobile {
   header .header-log-in .logo span {
     margin-top: 0px;
     font-size: 40px;
+    font-weight: 700;
   }
 
   .principal-text {
@@ -504,8 +525,7 @@ header.active .menu-mobile {
   align-items: center;
 }
 .how-to-order .steps .step {
-  padding: 5px;
-  margin: 30px 0px;
+  margin: 30px 3px;
 }
 .how-to-order .steps .step img {
   width: 150px;
@@ -551,6 +571,7 @@ header.active .menu-mobile {
   width: 100%;
   justify-content: center;
   align-items: center;
+  height: 70px;
   /* On mouse-over, add a grey background color */
   /* When the checkbox is checked, add a blue background */
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -559,9 +580,8 @@ header.active .menu-mobile {
   display: block;
   position: relative;
   padding-left: 5px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -594,6 +614,7 @@ header.active .menu-mobile {
 }
 .card-category .container-card-category .container-card {
   margin: auto;
+  padding-top: 150px;
 }
 .card-category .container-card-category .container-card h1 {
   text-align: center;
@@ -690,7 +711,7 @@ header.active .menu-mobile {
   align-items: center;
   height: 80px;
   overflow-x: auto;
-  background-color: #ffffffbf;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 480px) {
@@ -754,6 +775,11 @@ header.active .menu-mobile {
     font-size: 19px;
   }
 }
+@media screen and (min-width: 870px) {
+  .selecty {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 1200px) {
   .card-category .container-card-category .menu-filter .selection select {
     width: 20%;
@@ -764,7 +790,7 @@ footer {
   width: 100%;
   max-height: auto;
   padding: 70px 0;
-  background-color: #040e10;
+  background-color: #00ccbc;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -789,8 +815,9 @@ footer .container-social-online .logo {
   justify-content: center;
 }
 footer .container-social-online .logo h1 {
-  font-family: "Ballet", cursive;
-  color: #f8ce2a;
+  font-family: "RocknRoll One", sans-serif;
+  color: white;
+  text-shadow: 7px 1px 13px #ffeb3b, -6px 4px 5px #458282;
   font-weight: 700;
 }
 footer .container-social-online h2, footer .container-social-online .container-social .social {
@@ -3232,7 +3259,7 @@ main .container-restaurant .container-list-dishes {
 main .container-restaurant .container-list-dishes .card-dish {
   flex-basis: 325px;
   min-width: 200px;
-  height: 490px;
+  height: 550px;
   margin: 15px;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
   border: 3px solid #fff;
@@ -3304,7 +3331,7 @@ main .container-restaurant .container-list-dishes .card-dish .cart button {
   margin-left: 0;
 }
 .container-fluid .row h4 {
-  color: #040e10;
+  color: #00ccbc;
 }
 .container-fluid .row [v-cloak] {
   display: none;

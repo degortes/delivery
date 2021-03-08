@@ -51,3 +51,22 @@ h1, h2, h3, h4, h5, h6 {
 .btn-go-up.active {
     transform: scale(1);
 }
+
+.btn-red {
+    display: inline-block;
+    border-radius: 8px;
+    color: white;
+    padding: 15px;
+    background-color: #e6444499;
+    border: 0px;
+    font-size: 15px;
+    font-family: "RocknRoll One", sans-serif;
+}
+.btn-green {
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 15px;
+    color: white;
+    padding: 15px;
+    background-color: #4eec4e91;
+}

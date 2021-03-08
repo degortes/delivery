@@ -96,8 +96,8 @@
                                                 <h2 class="mt-3 mb-3">
                                                   Sicuro di voler eliminare il piatto??
                                                 </h2>
-                                                <br><a @click="noDelete()" class="button-show button-modifica-show">Annulla</a>
-                                                <button class="button-elimina-show" type="submit">Elimina</button>
+                                                <br><a @click="noDelete()" class="btn-green">Annulla</a>
+                                                <button class="btn-red" type="submit">Elimina</button>
                                             </div>
                                           </div>
                                         </div>

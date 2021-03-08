@@ -38,8 +38,8 @@
                                 <h2 class="mt-3 mb-3">
                                     Sicuro di voler svuotare il carrello???
                                 </h2>
-                                <br><p @click="noDelete()" class="button-show button-modifica-show">Annulla</p>
-                                <p v-if="cartCookie.length != 0"  @click="clear(),noDelete() ">Svuota carrello</p>
+                                <br><p @click="noDelete()" class="btn-green">Annulla</p>
+                                <p v-if="cartCookie.length != 0"  @click="clear(),noDelete() " class="btn-red">Svuota carrello</p>
                             </div>
                         </div>
                     </div>

@@ -2508,35 +2508,37 @@ var $ = function $(id) {
   return document.getElementById(id);
 };
 
-window.addEventListener('scroll', function () {
-  var position = $('author').getBoundingClientRect();
-  var position2 = $('wait').getBoundingClientRect();
-  var position3 = $('first').getBoundingClientRect();
-  var position4 = $('second').getBoundingClientRect();
-  var position5 = $('third').getBoundingClientRect();
+if ($('author')) {
+  window.addEventListener('scroll', function () {
+    var position = $('author').getBoundingClientRect();
+    var position2 = $('wait').getBoundingClientRect();
+    var position3 = $('first').getBoundingClientRect();
+    var position4 = $('second').getBoundingClientRect();
+    var position5 = $('third').getBoundingClientRect();
 
-  if (position.top >= 0 && position.bottom <= window.innerHeight) {
-    $('selection').classList.remove('selecty');
-  } else {
-    $('selection').classList.add('selecty');
-  }
+    if (position.top >= 0 && position.bottom <= window.innerHeight) {
+      $('selection').classList.remove('selecty');
+    } else {
+      $('selection').classList.add('selecty');
+    }
 
-  if (position3.top >= 0 && position3.bottom <= window.innerHeight) {
-    $('selection').classList.remove('selecty');
-  }
+    if (position3.top >= 0 && position3.bottom <= window.innerHeight) {
+      $('selection').classList.remove('selecty');
+    }
 
-  if (position4.top >= 0 && position4.bottom <= window.innerHeight) {
-    $('selection').classList.remove('selecty');
-  }
+    if (position4.top >= 0 && position4.bottom <= window.innerHeight) {
+      $('selection').classList.remove('selecty');
+    }
 
-  if (position5.top >= 0 && position5.bottom <= window.innerHeight) {
-    $('selection').classList.remove('selecty');
-  }
+    if (position5.top >= 0 && position5.bottom <= window.innerHeight) {
+      $('selection').classList.remove('selecty');
+    }
 
-  if (position2.top >= 0 && position2.bottom <= window.innerHeight) {
-    $('selection').classList.remove('selecty');
-  }
-});
+    if (position2.top >= 0 && position2.bottom <= window.innerHeight) {
+      $('selection').classList.remove('selecty');
+    }
+  });
+}
 
 /***/ }),
 

@@ -353,6 +353,7 @@ var app = new Vue({
 
 var $ = function( id ) { return document.getElementById( id ); };
 
+if ($('author')) {
 window.addEventListener('scroll', function() {
 
     var position = $('author').getBoundingClientRect();
@@ -379,3 +380,4 @@ window.addEventListener('scroll', function() {
 		$('selection').classList.remove('selecty')
 	}
 });
+}

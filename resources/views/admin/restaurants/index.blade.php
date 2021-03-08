@@ -45,7 +45,7 @@
 
 
                                 </div>
-                                @if (!count($restaurant->dishes))
+                                @if (!count($restaurant->dishes) && !count($restaurant->payments))
                                     <div class="action-restaurant-card-index" >
 
                                         <form action="{{route('admin.restaurants.destroy' , ['restaurant' => $restaurant->id ] )}}" method="post">
@@ -58,8 +58,8 @@
                                                     <h2 class="mt-3 mb-3">
                                                       Sicuro di voler eliminare il ristorante?
                                                     </h2>
-                                                    <a @click="noDelete()" class=" button-ordini-index">Annulla</a>
-                                                    <button class="button-elimina-show" type="submit">Elimina</button>
+                                                    <a @click="noDelete()" class=" btn-green">Annulla</a>
+                                                    <button class="btn-red" type="submit">Elimina</button>
                                                 </div>
                                               </div>
                                             </div>

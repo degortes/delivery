@@ -13,7 +13,7 @@
     <div class="container-social-online">
       <div class="logo">
         <img src="{{ asset('images/logo2.png') }}" alt="deliveboo-logo">
-        <h1>Deliveboo</h1>
+        <h1>delivery</h1>
       </div>
       <h2>Follow us</h2>
       <div class="container-social">
