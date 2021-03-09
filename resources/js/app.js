@@ -43,19 +43,24 @@ var app = new Vue({
 			Cookies.remove('cartCookie');
 			Cookies.remove('totalPriceCookie');
 			Cookies.remove('totalQuantity');
-			axios
-			.get('http://localhost:8000/api/dishes', {
-				params:{
-					query: this.selectedRestaurant
-				}
-			})
-			.then((risposta) =>{
-				// assegno ad array restaurants la risposta API
-				this.dishesList = risposta.data.results;
-				for (var i = 0; i < this.dishesList.length; i++) {
-					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
-				}
-			});
+			var $ = function( id ) { return document.getElementById( id ); };
+
+			if ($('dishsearch') || $('pay-page')) {
+
+				axios
+				.get('http://localhost:8000/api/dishes', {
+					params:{
+						query: this.selectedRestaurant
+					}
+				})
+				.then((risposta) =>{
+					// assegno ad array restaurants la risposta API
+					this.dishesList = risposta.data.results;
+					for (var i = 0; i < this.dishesList.length; i++) {
+						this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
+					}
+				});
+			}
 		},
 
 		goUp() {  // x button scrollUP

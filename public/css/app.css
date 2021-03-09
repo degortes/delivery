@@ -3115,7 +3115,7 @@ main .container-restaurant .container-list-dishes {
 main .container-restaurant .container-list-dishes .card-dish {
   flex-basis: 325px;
   min-width: 200px;
-  height: 550px;
+  height: 500px;
   margin: 15px;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
   border: 3px solid #fff;
