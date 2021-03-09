@@ -703,7 +703,7 @@ header.active .menu-mobile {
   border-radius: 10px;
 }
 .card-category .container-card-category .container-card .cards .card:hover {
-  opacity: 0.5;
+  transform: scale(1.1);
 }
 
 .selecty {
@@ -2672,7 +2672,7 @@ form .button-elimina-show:hover {
   background-image: url("/images/ordini.jpg");
   background-size: cover;
   background-position: center;
-  height: 78.5vh;
+  min-height: 78.5vh;
 }
 .container-restaurant-orders-details .container-form-details .my-restaurant-name {
   text-align: center;
