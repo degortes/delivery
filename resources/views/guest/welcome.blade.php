@@ -58,15 +58,10 @@
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">
                           <img v-if="restaurant.cover == null" src="{{url('/images/image-non-disp.png')}}" alt="">
                           <img v-else :src="'{{url('/storage')}}' + '/' + restaurant.cover" alt="">
-                          <p>@{{ restaurant.name }}</p>
-                      </a>
-                      <div class="card-restaurant-details">
+                          <h2>@{{ restaurant.name }}</h2>
                           <p><i class="fas fa-phone-alt"></i>@{{restaurant.phone}}</p>
                           <p><i class="fas fa-map-marker-alt"></i>@{{restaurant.address}}</p>
-                          <div class="see-restaurant">
-                              <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug">Visita Ristorante</a>
-                          </div>
-                      </div>
+                      </a>
 
                   </div>
               </div>

@@ -660,9 +660,12 @@ header.active .menu-mobile {
   position: relative;
 }
 .card-category .container-card-category .container-card .cards .card a p {
-  font-size: 23px;
+  font-size: 18px;
   margin: 5px;
   padding-bottom: 13px;
+}
+.card-category .container-card-category .container-card .cards .card i {
+  margin-right: 5px;
 }
 .card-category .container-card-category .container-card .cards .card .card-restaurant-details {
   width: 100%;
@@ -683,9 +686,6 @@ header.active .menu-mobile {
   color: #000;
   padding: 5px;
 }
-.card-category .container-card-category .container-card .cards .card .card-restaurant-details p i {
-  margin-right: 5px;
-}
 .card-category .container-card-category .container-card .cards .card .card-restaurant-details .see-restaurant {
   margin-top: 5px;
 }
@@ -702,9 +702,8 @@ header.active .menu-mobile {
   letter-spacing: 1px;
   border-radius: 10px;
 }
-.card-category .container-card-category .container-card .cards .card:hover .card-restaurant-details {
-  opacity: 1;
-  height: 100%;
+.card-category .container-card-category .container-card .cards .card:hover {
+  opacity: 0.5;
 }
 
 .selecty {
@@ -748,7 +747,7 @@ header.active .menu-mobile {
   }
 
   .card-category .container-card-category .container-card .cards .card a p {
-    font-size: 28px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -776,7 +775,7 @@ header.active .menu-mobile {
   }
 
   .card-category .container-card-category .container-card .cards .card a p {
-    font-size: 28px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1024px) {

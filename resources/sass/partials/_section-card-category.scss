@@ -178,12 +178,15 @@
                         }
 
                         p {
-                            font-size: 23px;
+                            font-size: 18px;
                             margin: 5px;
                             padding-bottom: 13px;
                         }
                     }
 
+                    i {
+                        margin-right: 5px;
+                    }
                     .card-restaurant-details{
 
                         width: 100%;
@@ -205,9 +208,6 @@
                         p{
                             color: #000;
                             padding: 5px;
-                            i {
-                                margin-right: 5px;
-                            }
                         }
 
                         .see-restaurant {
@@ -228,9 +228,8 @@
                             }
                         }
                     }
-                    &:hover  .card-restaurant-details{
-                        opacity: 1;
-                        height: 100%;
+                    &:hover  {
+                        opacity: 0.5;
                     }
                 }
             }
@@ -287,7 +286,7 @@
     }
 
     .card-category .container-card-category .container-card .cards .card a p {
-        font-size: 28px;
+        font-size: 18px;
     }
 }
 
@@ -326,7 +325,7 @@
     }
 
     .card-category .container-card-category .container-card .cards .card a p {
-        font-size: 28px;
+        font-size: 18px;
     }
 }
 
