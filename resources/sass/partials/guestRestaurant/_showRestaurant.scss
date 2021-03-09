@@ -34,7 +34,7 @@ main {
 
                 p {
                     padding: 10px 0;
-                    color: #bf996b;
+                    color: #00ccbc;
                     font-size: 20px;
                 }
 
@@ -60,15 +60,16 @@ main {
                 transition: 0.5s ease-in-out;
 
                 &:hover {
-                    border: 3px solid #d2ac7b;
+                    border: 3px solid #00ccbc;
                     padding: 10px;
                 }
 
                 h3 {
+                    text-shadow: 0px 0px 4px #ffeb3b, 0px 0px 1px #458282;
+                    color: #00ccbc;
                     padding: 18px;
                     text-align: center;
                     text-transform: uppercase;
-                    color: #d2ac7b;
                     font-size: 20px;
                 }
 
@@ -84,9 +85,21 @@ main {
 
                 p {
                     text-align: center;
-                    color: #d2ac7b;
-                    font-size: 22px;
+                    color: #00ccbc;
+                    font-size: 18px;
                     padding: 5px 0;
+                }
+                .ingredients {
+                    color: #0f537b;
+
+                }
+                .not-available {
+                    position: relative;
+                    top: -50%;
+                    h3 {
+                        color: #0f537b;
+
+                    }
                 }
 
 
@@ -97,15 +110,15 @@ main {
                     span {
                         font-size: 20px;
                         font-weight: bold;
-                        color: #d2ac7b;
+                        color: #00ccbc;
                     }
 
                     button {
                         width: 30px;
                         height: 30px;
                         background-color: none;
-                        border: 2px solid #d2ac7b;
-                        color: #d2ac7b;
+                        border: 2px solid #00ccbc;
+                        color: #00ccbc;
                         border-radius: 10px;
                         font-size: 20px;
                         cursor: pointer;

@@ -42,12 +42,14 @@
 
             ul{
                 width: 100%;
+                display: flex;
+                justify-content: space-around;
+                border-bottom: 1px solid $gold;
 
                 li {
-
+                    text-align: center;
                     list-style-type: none;
                     padding: 15px 10px;
-                    border-bottom: 1px solid $gold;
 
                     a{
                         color: #e3e8f1;
@@ -71,9 +73,7 @@
 
 .dashboard-body-content-restaurant-show {
 
-    height: calc(100vh - 97px - 60px - 102px);
     flex-basis: 80%;
-    overflow-y: scroll;
 
     .container-restaurant-show {
 
@@ -362,8 +362,6 @@
 
         .dashboard-body-restaurant-show {
 
-            display: flex;
-            height: calc(100vh - 97px - 60px);
 
             .dashboard-body-menu-restaurant-show {
 
@@ -376,10 +374,10 @@
 
 
                 ul{
+                    border-bottom: 1px solid $gold;
 
                     li {
 
-                        border-bottom: 1px solid $gold;
                         padding: 15px;
 
                         a{
@@ -395,7 +393,6 @@
 
     .dashboard-body-content-restaurant-show {
 
-        height: calc(100vh - 97px - 60px);
         .container-restaurant-show {
 
             padding-bottom: 20px;
@@ -513,7 +510,6 @@
         }
 
         .dashboard-body-restaurant-show {
-            height: calc(100vh - 97px - 69px);
 
             .dashboard-body-menu-restaurant-show {
 
@@ -534,7 +530,6 @@
 
     .dashboard-body-content-restaurant-show {
 
-        height: calc(100vh - 97px - 69px);
 
         .container-restaurant-show {
 

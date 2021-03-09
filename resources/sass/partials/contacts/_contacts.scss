@@ -11,10 +11,13 @@
 
     h1 {
         font-size: 115px;
+        color:#0f537b;
     }
 
     h3 {
         padding-bottom: 30px;
+        color:#0f537b;
+
     }
 }
 .contact-developer {
@@ -37,15 +40,16 @@
     p {
         margin-top: 30px;
         font-size: 20px;
-        color: #d2ac7b;
+        color: #d0eb99;
+        text-shadow: 0px 0px 3px #ffeb3b, -1px 1px 1px #458282;
     }
     a {
         text-decoration: none;
-        color: #d2ac7b;
+        color: #d0eb99;
 
         i {
             font-family: "Font Awesome 5 Brands";
-            color: #d2ac7b;
+            color: #d0eb99;
         }
 
         #i-email {
@@ -76,8 +80,8 @@
 
     .footer-project {
         width: 100%;
-        background-color: black;
-        border-top: 3px solid #d2ac7b;
+        background-color: #00ccbc;
+        border-top: 3px solid #d0eb99;
 
         .container-project {
             text-align: center;
@@ -85,7 +89,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            color: #d2ac7b;
+            color: white;
+            text-shadow: 0px 0px 3px #ffeb3b, -1px 1px 1px #458282;
             padding: 20px;
 
             .languages-project {
@@ -123,7 +128,7 @@
 
                 .link-project {
                     text-decoration: none;
-                    border: 1px solid #d2ac7b;
+                    border: 1px solid #fff;
                     border-radius: 6px;
                     display: flex;
                     justify-content: center;
@@ -134,12 +139,12 @@
                 a {
                     display: flex;
                     align-items: center;
-                    color: #d2ac7b;
+                    color: #fff;
                     padding: 15px 70px;
 
                     &:hover {
                         text-decoration: none;
-                        background-color: #d2ac7b;
+                        background-color: #d0eb99;
                         color: white;
                         transition: 1s ease;
                     }

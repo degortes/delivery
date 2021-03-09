@@ -57,7 +57,7 @@
 
         .menu-filter {
             background-color: red;
-            padding: 50px 15px;
+            padding: 50px 0;
             border-bottom: 1px solid $gold;
             border-top: 1px solid $gold;
             display: flex;
@@ -133,12 +133,11 @@
             padding-top: 150px;
 
             h1 {
-                width: 95vw;
                 text-align: center;
                 color: #0f537b;
                 font-size: 36px;
                 padding: 12px 0;
-                background-image: linear-gradient(to bottom right, #d0eb99, #d0eb99 42%, #00ccbc 60%);
+                background-image: radial-gradient( #d0eb99, #d0eb99 20%, #00ccbc 50%);
             }
 
             .cards {
@@ -254,6 +253,7 @@
 @media screen and (min-width: 480px){
     .card-category .container-card-category .container-card {
     padding-top: 50px;
+    width: 100%;
     }
     .how-to-order {
         margin: 0 auto;

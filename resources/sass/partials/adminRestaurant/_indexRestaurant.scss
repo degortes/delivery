@@ -62,9 +62,7 @@
 
     background: url('/images/i-tuoi-ristoranti.jpg');
     background-size: cover;
-    height: 100%;
     flex-basis: 80%;
-    overflow-y: scroll;
 
     .container-restaurant-index {
 
@@ -124,6 +122,9 @@
             .action-restaurant-card-index {
 
                 padding: 7px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
 
 
                 .flex {
@@ -133,7 +134,7 @@
 
                 .container-button-action-index-start {
 
-                    justify-content: flex-start;
+                    // justify-content: flex-start;
 
                     .button-dettagli-index {
 
@@ -154,7 +155,7 @@
 
                 .container-button-action-index-center {
 
-                    justify-content: center;
+                    // justify-content: center;
 
                     .button-ordini-index {
 
@@ -172,7 +173,7 @@
 
                 .container-button-action-index-end {
 
-                    justify-content: flex-end;
+                    // justify-content: flex-end;
 
                     .button-modifica-index {
 
@@ -188,13 +189,12 @@
                 .button-index {
 
                     margin-bottom: 7px;
-                    padding: 10px;
+                    padding: 10px 30px;
                     text-decoration: none;
                     font-size: 15px;
                     font-weight: 700;
                     border: 1px solid $gold;
                     border-radius: 10px;
-                    width: 50%;
                     text-align: center;
                     transition: all 1s ease-in-out;
                     display: inline-block;
@@ -487,7 +487,6 @@ form {
 
             .title-restaurant-index {
 
-                margin: 25px 0;
 
                 h1 {
                     font-size: 40px;
