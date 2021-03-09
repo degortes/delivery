@@ -2440,7 +2440,7 @@ var app = new Vue({
       return document.getElementById(id);
     };
 
-    if ($('dishsearch')) {
+    if ($('dishsearch') || $('pay-page')) {
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
         params: {
           query: this.selectedRestaurant

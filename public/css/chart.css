@@ -10030,8 +10030,8 @@ h3 {
 
 .btn-outline-dark:hover {
   color: #ffffff;
-  border: 1px solid #d2ac7b;
-  background-color: #d2ac7b;
+  border: 1px solid #00ccbc;
+  background-color: #00ccbc;
 }
 
 .chart-buttons {
@@ -10057,4 +10057,14 @@ h3 {
 
 #ordersChart {
   height: 440px !important;
+}
+
+.select-month {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+.select-month .btn {
+  margin: 5px;
+  width: 60px;
 }

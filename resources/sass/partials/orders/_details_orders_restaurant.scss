@@ -3,11 +3,13 @@
     .title-restaurant-orders-details {
         background-color: #101927;
         border-bottom: 3px solid $gold;
+        display: flex;
+        justify-content: space-around;
 
             h1 {
                 text-align: center;
                 color: $gold;
-                font-size: 25px;
+                font-size: 20px;
                 padding: 20px 0;
                 text-transform: uppercase;
             }
@@ -18,8 +20,7 @@
         background-image: url('/images/ordini.jpg');
         background-size: cover;
         background-position: center;
-        height: calc(100vh - 83px - 82px);
-        overflow-y: scroll;
+        height: 78.5vh;
 
 
         .my-restaurant-name {
@@ -133,13 +134,12 @@
         .title-restaurant-orders-details {
 
             h1 {
-                font-size: 40px;
+                font-size: 35px;
 
             }
         }
 
         .container-form-details {
-            height: calc(100vh - 83px - 97px);
             .my-restaurant-name {
 
                 font-size: 35px;
@@ -170,7 +170,7 @@
         .title-restaurant-orders-details {
 
             h1 {
-                font-size: 40px;
+                font-size: 35px;
 
             }
         }
@@ -200,7 +200,7 @@
         .title-restaurant-orders-details {
 
             h1 {
-                font-size: 40px;
+                font-size: 35px;
 
             }
         }

@@ -23,15 +23,18 @@
             <div class="col-xs-12">
                 <div>
                     <h2 class="mt-5 mb-3">Filtra per mese</h2>
+                    <div class="select-month">
+
                     @foreach ($months as $key => $month)
                         <a href="{{route('admin.statistics.month', ['id' => $id , 'month' => $key+1 ])}}" class="btn btn-outline-dark" >{{$month}}</a>
 
                     @endforeach
                 </div>
+                </div>
                 <canvas id="ordersChart" class="mt-5"></canvas>
                 <div class=" row mt-2">
-                    <h1 class="col-12 col-md-6 ">Totale ordini &euro; <span id="count"></h1>
-                    <h3 class="col-12 col-md-6 tot-num">Numero ordini  <span id="number"></h3>
+                    <h1 class="col-12 col-md-7 ">Totale ordini &euro; <span id="count"></h1>
+                    <h3 class="col-12 col-md-5 tot-num">Numero ordini  <span id="number"></h3>
                 </div>
             </div>
         </div>

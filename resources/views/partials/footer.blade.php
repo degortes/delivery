@@ -2,7 +2,7 @@
 
     <div class="container-contact">
       <p>+4 1800 555 1234</p>
-      <h5>food@deliveboo.com</h5>
+      <h5>food@delivery.com</h5>
       <ul>
         <li>49 Featherstone Street</li>
         <li>London</li>

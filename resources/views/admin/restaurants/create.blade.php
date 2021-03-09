@@ -4,7 +4,7 @@
 
 <div class="dashboard-restaurant-create">
     <div class="dashboard-header-restaurant-create">
-        <h1>Dashboard</h1>
+        <a href="{{url('/admin')}}"><h1>Dashboard</h1> </a>
     </div>
     <div class="dashboard-body-restaurant-create">
         <div class="dashboard-body-menu-restaurant-create">

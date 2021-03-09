@@ -1589,49 +1589,7 @@ form .button-elimina-show:hover {
   letter-spacing: 3px;
 }
 
-@media screen and (min-width: 768px) {
-  .dashboard-restaurant-create .dashboard-header-restaurant-create h1 {
-    font-size: 30px;
-    padding: 14px 10px;
-  }
-  .dashboard-restaurant-create .dashboard-body-restaurant-create {
-    display: flex;
-    height: calc(100vh - 97px - 60px);
-  }
-  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
-    background-color: #101927;
-    border-right: 1px solid #00ccbc;
-    height: 100%;
-    flex-basis: 40%;
-    display: block;
-    border-bottom: 0;
-  }
-  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li {
-    border-bottom: 1px solid #00ccbc;
-    padding: 15px;
-  }
-  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
-    font-size: 23px;
-  }
-
-  .dashboard-body-content-restaurant-create {
-    flex-basis: 80%;
-  }
-  .dashboard-body-content-restaurant-create .card-form-restaurant-create {
-    width: 70%;
-    margin: 20px auto;
-  }
-}
 @media screen and (min-width: 1024px) {
-  .dashboard-restaurant-create .dashboard-body-restaurant-create {
-    display: flex;
-  }
-  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create {
-    flex-basis: 30%;
-  }
-  .dashboard-restaurant-create .dashboard-body-restaurant-create .dashboard-body-menu-restaurant-create ul li a {
-    font-size: 25px;
-  }
   .dashboard-restaurant-create .dashboard-body-content-restaurant-create {
     flex-basis: 80%;
   }
@@ -2178,10 +2136,9 @@ form .button-elimina-show:hover {
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
   display: flex;
-  height: calc(100vh - 97px - 46px);
+  flex-direction: column;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
-  flex-basis: 20%;
   background-color: #101927;
 }
 .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li {
@@ -2200,7 +2157,6 @@ form .button-elimina-show:hover {
   background-image: url("/images/ristorante-black.jpg");
   background-size: cover;
   background-position: bottom;
-  overflow-y: scroll;
   flex-basis: 80%;
 }
 .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
@@ -2299,18 +2255,15 @@ form .button-elimina-show:hover {
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
     display: flex;
-    height: calc(100vh - 97px - 52px);
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit {
     border-right: 1px solid #00ccbc;
-    flex-basis: 20%;
   }
   .dashboard-restaurant-edit .dashboard-body-restaurant-edit .dashboard-body-menu-restaurant-edit ul li a {
     font-size: 25px;
   }
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit {
     flex-basis: 80%;
-    overflow-y: scroll;
   }
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
     width: 70%;
@@ -2323,9 +2276,6 @@ form .button-elimina-show:hover {
 @media screen and (min-width: 1024px) {
   .dashboard-restaurant-edit .dashboard-header-restaurant-edit h1 {
     font-size: 35px;
-  }
-  .dashboard-restaurant-edit .dashboard-body-restaurant-edit {
-    height: calc(100vh - 97px - 56px);
   }
   .dashboard-restaurant-edit .dashboard-body-content-restaurant-edit .card-form-restaurant-edit {
     margin: 30px auto;
@@ -2486,8 +2436,10 @@ form .button-elimina-show:hover {
   border-radius: 5px;
   border: 3px solid #00ccbc;
   height: 30px;
+  font-size: 20px;
 }
 .list-edit-plate .textarea {
+  font-size: 20px;
   height: 150px;
 }
 .list-edit-plate .check {
@@ -2550,9 +2502,6 @@ form .button-elimina-show:hover {
   }
 }
 @media screen and (min-width: 1300px) {
-  .container-general-edit .container-form-edit-plate {
-    width: 25%;
-  }
   .container-general-edit .title-edit-plate h1 {
     font-size: 35px;
   }
@@ -2710,11 +2659,13 @@ form .button-elimina-show:hover {
 .container-restaurant-orders-details .title-restaurant-orders-details {
   background-color: #101927;
   border-bottom: 3px solid #00ccbc;
+  display: flex;
+  justify-content: space-around;
 }
 .container-restaurant-orders-details .title-restaurant-orders-details h1 {
   text-align: center;
   color: #00ccbc;
-  font-size: 25px;
+  font-size: 20px;
   padding: 20px 0;
   text-transform: uppercase;
 }
@@ -2722,8 +2673,7 @@ form .button-elimina-show:hover {
   background-image: url("/images/ordini.jpg");
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 83px - 82px);
-  overflow-y: scroll;
+  height: 78.5vh;
 }
 .container-restaurant-orders-details .container-form-details .my-restaurant-name {
   text-align: center;
@@ -2808,10 +2758,7 @@ form .button-elimina-show:hover {
 
 @media screen and (min-width: 768px) {
   .container-restaurant-orders-details .title-restaurant-orders-details h1 {
-    font-size: 40px;
-  }
-  .container-restaurant-orders-details .container-form-details {
-    height: calc(100vh - 83px - 97px);
+    font-size: 35px;
   }
   .container-restaurant-orders-details .container-form-details .my-restaurant-name {
     font-size: 35px;
@@ -2829,7 +2776,7 @@ form .button-elimina-show:hover {
 }
 @media screen and (min-width: 1024px) {
   .container-restaurant-orders-details .title-restaurant-orders-details h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .container-restaurant-orders-details .container-form-details .my-restaurant-name {
     font-size: 40px;
@@ -2840,7 +2787,7 @@ form .button-elimina-show:hover {
 }
 @media screen and (min-width: 1300px) {
   .container-restaurant-orders-details .title-restaurant-orders-details h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .container-restaurant-orders-details .container-form-details .my-restaurant-name {
     font-size: 50px;
@@ -2876,12 +2823,14 @@ form .button-elimina-show:hover {
   align-items: center;
 }
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
+  border-bottom: 1px solid #00ccbc;
 }
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li {
   list-style-type: none;
   padding: 15px 10px;
-  border-bottom: 1px solid #00ccbc;
 }
 .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
   color: #e3e8f1;
@@ -2894,15 +2843,12 @@ form .button-elimina-show:hover {
 }
 
 .dashboard-body-content-dishes-show {
-  height: calc(100vh - 97px - 60px - 102px);
   flex-basis: 80%;
-  overflow-y: scroll;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show {
   background-image: url("/images/snacks-food.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
   text-align: center;
@@ -2953,43 +2899,6 @@ form .button-elimina-show:hover {
   font-weight: normal;
 }
 
-@media screen and (min-width: 768px) {
-  .dashboard-dishes-show .dashboard-header-dishes-show a h1 {
-    font-size: 30px;
-    padding: 14px 10px;
-  }
-  .dashboard-dishes-show .dashboard-body-dishes-show {
-    display: flex;
-    height: calc(100vh - 97px - 60px);
-  }
-  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show {
-    background-color: #101927;
-    border-right: 1px solid #00ccbc;
-    height: 100%;
-    flex-basis: 40%;
-    display: block;
-    border-bottom: 0;
-  }
-  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li {
-    border-bottom: 1px solid #00ccbc;
-    padding: 15px;
-  }
-  .dashboard-dishes-show .dashboard-body-dishes-show .dashboard-body-menu-dishes-show ul li a {
-    font-size: 23px;
-  }
-  .dashboard-body-content-dishes-show {
-    height: calc(100vh - 97px - 60px);
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .title-dishes-show h1 {
-    font-size: 35px;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show {
-    flex-basis: 70%;
-  }
-  .dashboard-body-content-dishes-show .container-restaurant-dishes-show .dishes-show .dishes-card-show .title-dishes-card-show h1 {
-    font-size: 25px;
-  }
-}
 @media screen and (min-width: 1024px) {
   .dashboard-dishes-show .dashboard-header-dishes-show a h1 {
     font-size: 30px;

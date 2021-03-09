@@ -36,13 +36,15 @@
 
 
             ul{
+                display: flex;
+                justify-content: space-around;
                 width: 100%;
+                border-bottom: 1px solid $gold;
 
                 li {
 
                     list-style-type: none;
                     padding: 15px 10px;
-                    border-bottom: 1px solid $gold;
 
                     a{
                         color: #e3e8f1;
@@ -66,9 +68,7 @@
 
 .dashboard-body-content-dishes-show{
 
-    height: calc(100vh - 97px - 60px - 102px);
     flex-basis: 80%;
-    overflow-y: scroll;
 
 
 
@@ -77,7 +77,6 @@
         background-image: url('/images/snacks-food.jpg');
         background-size: cover;
         background-position: center;
-        height: 100vh;
 
 
         .title-dishes-show{
@@ -148,91 +147,91 @@
     }
 }
 
-@media screen and (min-width: 768px){
-
-    .dashboard-dishes-show {
-
-        .dashboard-header-dishes-show {
-
-
-
-            a {
-
-
-                h1 {
-
-                    font-size: 30px;
-                    padding: 14px 10px;
-                }
-            }
-        }
-
-        .dashboard-body-dishes-show {
-
-            display: flex;
-            height: calc(100vh - 97px - 60px);
-
-            .dashboard-body-menu-dishes-show {
-
-                background-color: #101927;
-                border-right: 1px solid $gold;
-                height: 100%;
-                flex-basis: 40%;
-                display: block;
-                border-bottom: 0;
-
-                ul{
-
-                    li {
-
-                        border-bottom: 1px solid $gold;
-                        padding: 15px;
-
-                        a{
-
-                            font-size: 23px;
-
-
-                            &:hover {
-
-
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-
-    .dashboard-body-content-dishes-show{
-        height: calc(100vh - 97px - 60px);
-
-
-        .container-restaurant-dishes-show {
-
-            .title-dishes-show{
-
-                h1 {
-
-                    font-size: 35px;
-
-                }
-            }
-
-            .dishes-show {
-                .dishes-card-show {
-                    flex-basis: 70%;
-                    .title-dishes-card-show {
-                        h1 {
-                            font-size: 25px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// @media screen and (min-width: 768px){
+//
+//     .dashboard-dishes-show {
+//
+//         .dashboard-header-dishes-show {
+//
+//
+//
+//             a {
+//
+//
+//                 h1 {
+//
+//                     font-size: 30px;
+//                     padding: 14px 10px;
+//                 }
+//             }
+//         }
+//
+//         .dashboard-body-dishes-show {
+//
+//             display: flex;
+//             height: calc(100vh - 97px - 60px);
+//
+//             .dashboard-body-menu-dishes-show {
+//
+//                 background-color: #101927;
+//                 border-right: 1px solid $gold;
+//                 height: 100%;
+//                 flex-basis: 40%;
+//                 display: block;
+//                 border-bottom: 0;
+//
+//                 ul{
+//
+//                     li {
+//
+//                         border-bottom: 1px solid $gold;
+//                         padding: 15px;
+//
+//                         a{
+//
+//                             font-size: 23px;
+//
+//
+//                             &:hover {
+//
+//
+//                             }
+//                         }
+//                     }
+//                 }
+//
+//             }
+//         }
+//     }
+//
+//     .dashboard-body-content-dishes-show{
+//         height: calc(100vh - 97px - 60px);
+//
+//
+//         .container-restaurant-dishes-show {
+//
+//             .title-dishes-show{
+//
+//                 h1 {
+//
+//                     font-size: 35px;
+//
+//                 }
+//             }
+//
+//             .dishes-show {
+//                 .dishes-card-show {
+//                     flex-basis: 70%;
+//                     .title-dishes-card-show {
+//                         h1 {
+//                             font-size: 25px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media screen and (min-width: 1024px){
 

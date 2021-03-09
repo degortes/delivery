@@ -56,10 +56,13 @@
             border-radius: 5px;
             border: 3px solid $gold;
             height: 30px;
+            font-size: 20px;
+
 
         }
 
         .textarea {
+            font-size: 20px;
             height: 150px;
         }
 
@@ -169,9 +172,6 @@
 @media screen and (min-width:1300px) {
 
     .container-general-edit {
-        .container-form-edit-plate {
-            width: 25%;
-        }
 
         .title-edit-plate {
 

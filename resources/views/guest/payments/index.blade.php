@@ -7,7 +7,7 @@
 
 @section('content')
 
-  <div class="container-fluid">
+  <div id="pay-page" class="container-fluid">
 
     <div v-if="cartCookie.length && !servicePage" class="row g-3" v-cloak>
       <div class="offset-xs-2 col-xs-8 col-md-5 col-lg-4 order-md-last mt-5">

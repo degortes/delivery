@@ -285,7 +285,7 @@ var app = new Vue({
 
 		var $ = function( id ) { return document.getElementById( id ); };
 
-		if ($('dishsearch')) {
+		if ($('dishsearch') || $('pay-page')) {
 
 			axios
 			.get('http://localhost:8000/api/dishes', {

@@ -2,31 +2,6 @@
 @section('content')
 
   <main>
-    <section class="how-to-order">
-      <h1>
-        Come ordinare:
-      </h1>
-      <div class="steps">
-        <div class="step">
-          <img src="{{url('/images/menu.png')}}" alt="">
-          <h5>
-            1. Scegli il ristorante
-          </h5>
-        </div>
-        <div class="step">
-          <img src="{{url('/images/order-food.png')}}" alt="">
-          <h5>
-            2. Seleziona i tuoi piatti preferiti
-          </h5>
-        </div>
-        <div class="step">
-          <img src="{{url('/images/food-delivery.png')}}" alt="">
-          <h5>
-            3. Attendi la consegna
-          </h5>
-        </div>
-      </div>
-    </section>
     <div class="container-restaurant">
       <div class="content-restaurant" id="dishsearch">
             <h1>

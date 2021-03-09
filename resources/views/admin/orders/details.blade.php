@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container-restaurant-orders-details">
     <div class="title-restaurant-orders-details">
+        <a href="{{route('admin.home')}}">
+            <h1>Dashboard</h1>
+        </a>
         <h1>Dettagli Ordini</h1>
     </div>
     <div class="container-form-details">
