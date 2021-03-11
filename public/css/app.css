@@ -328,7 +328,7 @@ header .header-top .toggle-menu i {
   transition-delay: 0s;
 }
 .menu-mobile .nav-menu-mobile {
-  border: 1px solid #00ccbc;
+  border: 10px groove #00ccbc;
   width: 100%;
   height: 100%;
 }
@@ -349,6 +349,7 @@ header .header-top .toggle-menu i {
 .menu-mobile .nav-menu-mobile ul {
   list-style-type: none;
   text-align: center;
+  display: grid;
 }
 .menu-mobile .nav-menu-mobile ul li:hover {
   background-color: #00ccbc;
@@ -374,7 +375,8 @@ header .header-top .toggle-menu i {
 header.active .menu-mobile {
   opacity: 1;
   visibility: visible;
-  transition-delay: 1s;
+  transition-delay: 0.5s;
+  background-color: azure;
 }
 
 .header-bottom {
@@ -534,7 +536,7 @@ header.active .menu-mobile {
   margin-bottom: 10px;
   background-color: white;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 .how-to-order .steps .step h5 {
   font-size: 21px;
@@ -588,7 +590,7 @@ header.active .menu-mobile {
   -ms-user-select: none;
   user-select: none;
 }
-.card-category .container-card-category .menu-filter .selection .labelcontainer:hover {
+.card-category .container-card-category .menu-filter .selection .labelcontainer:hover .checkmark {
   border: 1px solid #00ccbc;
   border-radius: 5px;
 }
