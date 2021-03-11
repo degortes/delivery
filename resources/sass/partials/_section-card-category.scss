@@ -82,6 +82,10 @@
                 height: 70px;
 
                 .labelcontainer {
+                    &:hover {
+                        border: 1px solid #00ccbc;
+                        border-radius: 5px;
+                    }
                     input {
                         position: absolute;
                         opacity: 0;

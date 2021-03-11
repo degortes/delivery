@@ -60,7 +60,7 @@
 
 .dashboard-body-content-restaurant-index{
 
-    background: url('/images/i-tuoi-ristoranti.jpg');
+    background-image: linear-gradient(to top left, #d0eb99, #d0eb99 42%, #00ccbc 60%);
     background-size: cover;
     flex-basis: 80%;
 
@@ -75,8 +75,9 @@
             h1 {
                 text-align: center;
                 font-size: 30px;
-                color: #e3e8f1;
+                color: #ffffff;
                 text-transform: uppercase;
+                text-shadow: 7px 1px 13px #ffc107, -6px 4px 5px #458282;
             }
         }
     }

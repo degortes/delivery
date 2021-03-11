@@ -219,11 +219,10 @@
 
             flex-basis: 95%;
             border: 5px ridge $gold;
-            background: rgba(0,0,0,0.8);
+            background: #daf1eb80;
             border-radius: 10px;
             margin: 20px 5px;
-            padding: 10px 5px;
-            transition: 1s ease-in-out;
+            transition: 0.5s ease-in-out;
 
 
             &:hover {
@@ -235,8 +234,8 @@
                 text-align: center;
 
                 img {
-                    max-width: 100%;
-                    border-radius: 10px;
+                    width: 100%;
+                    border-radius: 5px;
                 }
 
                 h3 {
@@ -778,7 +777,6 @@
 
                     flex-basis: 20%;
                     margin: 20px;
-                    padding: 20px 5px;
 
 
                     .body-restaurant-card-show{
