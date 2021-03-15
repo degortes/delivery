@@ -25,6 +25,7 @@ var app = new Vue({
 		valueInputPassword: '',
 		servicePage: false,
 		dropinInstance: null,
+        sorted: false,
 	},
 
 
@@ -44,7 +45,6 @@ var app = new Vue({
 			Cookies.remove('totalPriceCookie');
 			Cookies.remove('totalQuantity');
 			var $ = function( id ) { return document.getElementById( id ); };
-
 			if ($('dishsearch') || $('pay-page')) {
 
 				axios
@@ -195,6 +195,15 @@ var app = new Vue({
         toggleMenu() {         // x menu mobile
 			this.isActive = !this.isActive;
 		},
+        sortByPrice(){
+		    if (!this.sorted) {
+                this.dishesList.sort((a,b) => (a.price < b.price? -1 : 1));
+            } else {
+                this.dishesList.sort((a,b) => (a.price > b.price? -1 : 1));
+            }
+		    this.sorted = !this.sorted;
+
+        },
 
 		searchRestaurants(){ // funzione cerca restaurants
 			axios
@@ -305,7 +314,7 @@ var app = new Vue({
 					this.dishesList[i]['quantity'] = 0; // aggiungo chiave quantity = 0 x tutti i piatti
 					if (this.cartCookie.length) {
 						for (var j = 0; j < this.cartCookie.length; j++) {
-							if (this.cartCookie[j].id == this.dishesList[i].id) {
+							if (this.cartCookie[j].id === this.dishesList[i].id) {
 								this.dishesList[i] = this.cartCookie[j];
 							}
 						}

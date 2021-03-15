@@ -25,7 +25,7 @@ class RestaurantController extends Controller
               // code...
               $restaurants = Restaurant::whereHas('categories', function (Builder $query) use ($category)  {
                   $query->where('id', '=', $category);
-              })->get();
+              })->with('categories')->get();
               foreach ($restaurants as $restaurant) {
                   if (!in_array($restaurant , $show )) {
                       // code...
@@ -39,7 +39,7 @@ class RestaurantController extends Controller
       } else {
         //recupero il parametro query (id di category)
 
-        $restaurants = Restaurant::limit(8)->orderBy('id' , 'desc')->get();
+        $restaurants = Restaurant::limit(8)->orderBy('id' , 'desc')->with('categories')->get();
       }
 
          // prendo tutti i post

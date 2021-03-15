@@ -670,6 +670,15 @@ header.active .menu-mobile {
   margin: 5px;
   padding-bottom: 13px;
 }
+.card-category .container-card-category .container-card .cards .card a span {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid grey;
+  margin: 5px;
+}
 .card-category .container-card-category .container-card .cards .card i {
   margin-right: 5px;
 }
@@ -3120,7 +3129,7 @@ main .container-restaurant .container-list-dishes {
 main .container-restaurant .container-list-dishes .card-dish {
   flex-basis: 325px;
   min-width: 200px;
-  height: 500px;
+  height: 550px;
   margin: 15px;
   box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.26);
   border: 3px solid #fff;
@@ -3138,6 +3147,14 @@ main .container-restaurant .container-list-dishes .card-dish h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
+}
+main .container-restaurant .container-list-dishes .card-dish h6 {
+  margin: 0 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
 }
 main .container-restaurant .container-list-dishes .card-dish .wp-img-card-dish {
   width: 100%;

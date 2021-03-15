@@ -2175,7 +2175,8 @@ var app = new Vue({
     valueInputEmail: '',
     valueInputPassword: '',
     servicePage: false,
-    dropinInstance: null
+    dropinInstance: null,
+    sorted: false
   },
   methods: {
     clear: function clear() {
@@ -2331,6 +2332,19 @@ var app = new Vue({
       // x menu mobile
       this.isActive = !this.isActive;
     },
+    sortByPrice: function sortByPrice() {
+      if (!this.sorted) {
+        this.dishesList.sort(function (a, b) {
+          return a.price < b.price ? -1 : 1;
+        });
+      } else {
+        this.dishesList.sort(function (a, b) {
+          return a.price > b.price ? -1 : 1;
+        });
+      }
+
+      this.sorted = !this.sorted;
+    },
     searchRestaurants: function searchRestaurants() {
       var _this4 = this;
 
@@ -2461,7 +2475,7 @@ var app = new Vue({
 
           if (_this5.cartCookie.length) {
             for (var j = 0; j < _this5.cartCookie.length; j++) {
-              if (_this5.cartCookie[j].id == _this5.dishesList[i].id) {
+              if (_this5.cartCookie[j].id === _this5.dishesList[i].id) {
                 _this5.dishesList[i] = _this5.cartCookie[j];
               }
             }

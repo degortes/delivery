@@ -19,8 +19,9 @@
         </div>
       </div>
 
-      <div class="container-dish">
-        <div class="container-list-dishes">
+        <div class="container-dish">
+            <button class="btn-green" @click="sortByPrice()" >Ordina per prezzo</button>
+            <div class="container-list-dishes">
 
           <div v-for="product in dishesList" :key="product.id" class="card-dish">
             <h3 class="product__header">@{{ product.name }}</h3>
@@ -30,6 +31,7 @@
             </div>
             <p class="">Prezzo: @{{ product.price }} €</p>
             <p class="ingredients">Ingredienti: @{{ product.ingredients }}</p>
+              <h6> @{{ product.c_name  }}</h6>
 
             <div class="cart" v-if="product.visibility">
                 <button @click="updateCart(product, 'subtract'), cartBtnLessPlus()" class="cart__button">-</button>
