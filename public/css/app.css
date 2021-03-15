@@ -312,7 +312,6 @@ header .header-top .toggle-menu i {
 
 .menu-mobile {
   min-width: 250px;
-  min-height: 250px;
   max-width: 600px;
   max-width: 600px;
   display: flex;
@@ -468,7 +467,6 @@ header.active .menu-mobile {
 
   .menu-mobile {
     min-width: 350px;
-    min-height: 350px;
     transition: 0.5s;
   }
 
@@ -657,8 +655,10 @@ header.active .menu-mobile {
   display: flex;
   flex-direction: column;
 }
+.card-category .container-card-category .container-card .cards .card a h2 {
+  padding: 10px 0;
+}
 .card-category .container-card-category .container-card .cards .card a img {
-  border-radius: 8px 8px 0 0;
   width: 100%;
   height: 80%;
   -o-object-fit: cover;
@@ -3096,6 +3096,11 @@ main {
 main .how-to-order {
   border-top: 1px solid #00ccbc;
   border-bottom: 2px solid #00ccbc;
+}
+main .flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 main .container-restaurant {
   background-image: url("/images/marmo.jpg");

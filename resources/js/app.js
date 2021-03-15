@@ -26,6 +26,8 @@ var app = new Vue({
 		servicePage: false,
 		dropinInstance: null,
         sorted: false,
+        courted: false,
+        visible: false,
 	},
 
 
@@ -196,12 +198,38 @@ var app = new Vue({
 			this.isActive = !this.isActive;
 		},
         sortByPrice(){
-		    if (!this.sorted) {
+            this.visible = false
+            this.courted = false;
+            if (!this.sorted) {
                 this.dishesList.sort((a,b) => (a.price < b.price? -1 : 1));
             } else {
-                this.dishesList.sort((a,b) => (a.price > b.price? -1 : 1));
+                this.dishesList.reverse();
             }
-		    this.sorted = !this.sorted;
+            this.sorted = !this.sorted;
+
+
+
+        },
+        sortByCourse(){
+            this.visible = false
+            this.sorted = false
+            if (!this.courted) {
+                this.dishesList.sort((a,b) => (a.course_id < b.course_id? -1 : 1));
+            } else {
+                this.dishesList.reverse();
+            }
+            this.courted = !this.courted;
+
+        },
+        sortByVis(){
+            this.sorted = false
+            this.courted = false;
+            if (!this.visible) {
+                this.dishesList.sort((a,b) => (a.visibility > b.visibility? -1 : 1));
+            } else {
+                this.dishesList.reverse();
+            }
+            this.visible = !this.visible;
 
         },
 

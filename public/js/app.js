@@ -2176,7 +2176,9 @@ var app = new Vue({
     valueInputPassword: '',
     servicePage: false,
     dropinInstance: null,
-    sorted: false
+    sorted: false,
+    courted: false,
+    visible: false
   },
   methods: {
     clear: function clear() {
@@ -2333,17 +2335,46 @@ var app = new Vue({
       this.isActive = !this.isActive;
     },
     sortByPrice: function sortByPrice() {
+      this.visible = false;
+      this.courted = false;
+
       if (!this.sorted) {
         this.dishesList.sort(function (a, b) {
           return a.price < b.price ? -1 : 1;
         });
       } else {
-        this.dishesList.sort(function (a, b) {
-          return a.price > b.price ? -1 : 1;
-        });
+        this.dishesList.reverse();
       }
 
       this.sorted = !this.sorted;
+    },
+    sortByCourse: function sortByCourse() {
+      this.visible = false;
+      this.sorted = false;
+
+      if (!this.courted) {
+        this.dishesList.sort(function (a, b) {
+          return a.course_id < b.course_id ? -1 : 1;
+        });
+      } else {
+        this.dishesList.reverse();
+      }
+
+      this.courted = !this.courted;
+    },
+    sortByVis: function sortByVis() {
+      this.sorted = false;
+      this.courted = false;
+
+      if (!this.visible) {
+        this.dishesList.sort(function (a, b) {
+          return a.visibility > b.visibility ? -1 : 1;
+        });
+      } else {
+        this.dishesList.reverse();
+      }
+
+      this.visible = !this.visible;
     },
     searchRestaurants: function searchRestaurants() {
       var _this4 = this;

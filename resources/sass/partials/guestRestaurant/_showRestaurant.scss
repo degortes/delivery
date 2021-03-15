@@ -6,7 +6,11 @@ main {
         border-top: 1px solid $gold;
         border-bottom: 2px solid $gold;
     }
-
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     .container-restaurant {
 
         background-image: url('/images/marmo.jpg');

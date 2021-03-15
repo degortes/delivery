@@ -56,9 +56,9 @@
               <div class="cards">
                   <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug" >
+                          <h2>@{{ restaurant.name }}</h2>
                           <img v-if="restaurant.cover == null" src="{{url('/images/image-non-disp.png')}}" alt="">
                           <img v-else :src="'{{url('/storage')}}' + '/' + restaurant.cover" alt="">
-                          <h2>@{{ restaurant.name }}</h2>
                           <p><i class="fas fa-map-marker-alt"></i>@{{restaurant.address}}</p>
                           <p><i class="fas fa-phone-alt"></i>@{{restaurant.phone}}</p>
                           <div>
