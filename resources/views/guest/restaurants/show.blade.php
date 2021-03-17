@@ -32,6 +32,9 @@
                         <img v-if="product.cover == null" src="{{url('/images/image-non-disp.png')}}" alt="">
                         <img v-else :src="'{{url ('/storage')}}' + '/' + product.cover" :alt="product.name" class="product__image">
                     </div>
+                    <div class="not-available" v-if="!product.visibility">
+                        <h3>Attualmente non disponibile</h3>
+                    </div>
                     <p class="">Prezzo: @{{ product.price }} €</p>
                     <p class="ingredients">Ingredienti: @{{ product.ingredients }}</p>
                     <h6> @{{ product.c_name  }}</h6>
@@ -40,9 +43,6 @@
                         <span v-if="totalPrice != 0" class="cart__quantity">@{{ product.quantity }}</span>
                         <span v-else class="cart__quantity">0</span>
                         <button @click="updateCart(product, 'add'), cartBtnLessPlus()" class="cart__button">+</button>
-                    </div>
-                    <div class="not-available" v-else>
-                        <h3>Attualmente non disponibile</h3>
                     </div>
                 </div>
             </div>

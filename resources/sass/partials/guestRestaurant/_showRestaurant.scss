@@ -54,6 +54,7 @@ main {
             padding: 50px 15px;
 
             .card-dish{
+                position: relative;
                 flex-basis: 325px;
                 min-width: 200px;
                 height: 550px;
@@ -94,6 +95,14 @@ main {
                         object-fit: cover;
                     }
                 }
+                .not-available {
+                    position: absolute;
+                    top: 25%;
+                    h3 {
+                        color: #0f537b;
+
+                    }
+                }
 
                 p {
                     text-align: center;
@@ -104,14 +113,6 @@ main {
                 .ingredients {
                     color: #0f537b;
 
-                }
-                .not-available {
-                    position: relative;
-                    top: -50%;
-                    h3 {
-                        color: #0f537b;
-
-                    }
                 }
 
 

@@ -2382,6 +2382,7 @@ var app = new Vue({
       var _this4 = this;
 
       // funzione cerca restaurants
+      this.selectedCategory = this.selectedCategory.reverse();
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/restaurants', {
         params: {
           query: this.selectedCategory
@@ -2473,6 +2474,14 @@ var app = new Vue({
       Cookies.set('cartCookie', this.cart, {
         expires: date
       });
+    }
+
+    if (Cookies.get('totalQuantity')) {
+      this.totalQuantity = Cookies.get('totalQuantity') !== 'undefined' && Cookies.get('totalQuantity');
+    } else {
+      Cookies.set('totalQuantity', this.totalQuantity, {
+        expires: date
+      });
     } //nuova funzione
 
 
@@ -2489,10 +2498,6 @@ var app = new Vue({
     this.cognome = Cookies.get('cognome') !== 'undefined' && Cookies.get('cognome');
     this.indirizzo = Cookies.get('indirizzo') !== 'undefined' && Cookies.get('indirizzo');
     this.selectedRestaurant = window.location.href.slice(34);
-
-    var $ = function $(id) {
-      return document.getElementById(id);
-    };
 
     if ($('dishsearch') || $('pay-page')) {
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8000/api/dishes', {
@@ -2574,6 +2579,7 @@ var app = new Vue({
       }
 
       Cookies.set('totalPriceCookie', this.totalPrice);
+      Cookies.set('totalQuantity', this.totalQuantity);
     }
   }
 });

@@ -17,7 +17,7 @@
                     <div v-cloak class="cart">
                         <div class="wp-image-cart" @click="showCart = !showCart">
                             <i class="fas fa-shopping-cart"></i>
-                            <span v-if="totalQuantity" class="total-quantity">@{{ totalQuantity }}</span>
+                            <span v-if="totalQuantity > 0" class="total-quantity">@{{ totalQuantity }}</span>
                             <div v-cloak v-if="showCart" class="cart-dropdown">
                                 <ul class="cart-dropdown-list">
                                     <h3>Carrello</h3>

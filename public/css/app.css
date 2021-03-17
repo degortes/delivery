@@ -206,11 +206,15 @@ header .header-log-in .cart .total-quantity {
   top: -7px;
   right: -7px;
   display: inline-block;
-  padding: 0 3px;
   background-color: #7fffd4b8;
   border-radius: 50%;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid green;
 }
 header .header-log-in .cart .cart-dropdown {
   border: 1px solid #c1c1c1;
@@ -3135,6 +3139,7 @@ main .container-restaurant .container-list-dishes {
   padding: 50px 15px;
 }
 main .container-restaurant .container-list-dishes .card-dish {
+  position: relative;
   flex-basis: 325px;
   min-width: 200px;
   height: 550px;
@@ -3173,6 +3178,13 @@ main .container-restaurant .container-list-dishes .card-dish .wp-img-card-dish i
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .container-restaurant .container-list-dishes .card-dish .not-available {
+  position: absolute;
+  top: 25%;
+}
+main .container-restaurant .container-list-dishes .card-dish .not-available h3 {
+  color: #0f537b;
+}
 main .container-restaurant .container-list-dishes .card-dish p {
   text-align: center;
   color: #00ccbc;
@@ -3180,13 +3192,6 @@ main .container-restaurant .container-list-dishes .card-dish p {
   padding: 5px 0;
 }
 main .container-restaurant .container-list-dishes .card-dish .ingredients {
-  color: #0f537b;
-}
-main .container-restaurant .container-list-dishes .card-dish .not-available {
-  position: relative;
-  top: -50%;
-}
-main .container-restaurant .container-list-dishes .card-dish .not-available h3 {
   color: #0f537b;
 }
 main .container-restaurant .container-list-dishes .card-dish .cart {

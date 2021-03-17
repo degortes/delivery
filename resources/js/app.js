@@ -236,6 +236,7 @@ var app = new Vue({
         },
 
 		searchRestaurants(){ // funzione cerca restaurants
+		    this.selectedCategory = this.selectedCategory.reverse();
 			axios
 			.get('http://localhost:8000/api/restaurants', {
 				params:{
@@ -312,6 +313,14 @@ var app = new Vue({
 		} else {
 			Cookies.set('cartCookie', this.cart, { expires: date })
 		}
+
+		if (Cookies.get('totalQuantity')) {
+			this.totalQuantity = (Cookies.get('totalQuantity') !== 'undefined') && Cookies.get('totalQuantity');
+		} else {
+			Cookies.set('totalQuantity', this.totalQuantity, { expires: date })
+		}
+
+
 		//nuova funzione
 		if (Cookies.get('totalPriceCookie') > 0) {
 			this.totalPriceCookie = (Cookies.get('totalPriceCookie') !== 'undefined') && Cookies.get('totalPriceCookie');
@@ -327,7 +336,6 @@ var app = new Vue({
 		this.selectedRestaurant = window.location.href.slice(34);
 
 
-		var $ = function( id ) { return document.getElementById( id ); };
 
 		if ($('dishsearch') || $('pay-page')) {
 
@@ -412,7 +420,8 @@ var app = new Vue({
 			if (this.cartCookie.length == 1) {
 				this.totalPrice = this.cartCookie[0].price * this.cartCookie[0].quantity;
 			}
-			Cookies.set('totalPriceCookie', this.totalPrice)
+			Cookies.set('totalPriceCookie', this.totalPrice);
+			Cookies.set('totalQuantity', this.totalQuantity);
 		},
 	}
 });
