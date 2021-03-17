@@ -28,33 +28,30 @@
     </div>
   </section>
 
-  <section class="card-category">
-      <div class="container-card-category">
-          <div class="menu-filter">
-              <h3 id="author" class="ricerca-avanzata">Seleziona una o più categorie</h3>
-              <div class="selection" id="selection">
+    <section class="card-category">
+        <div class="container-card-category">
+            <div class="menu-filter">
+                <h3 id="author" class="ricerca-avanzata">Seleziona una o più categorie</h3>
+                <div class="selection" id="selection">
                     @foreach ($categories as $category)
                         <div class="form-check">
                             <label class="labelcontainer">
-
                                 <input @change="searchRestaurants()" v-model="selectedCategory" name="query" class="form-check-input" type="checkbox" :value="{{ $category->id }}" >
                                 <span class="checkmark">{{ $category->name }}</span>
                             </label>
                         </div>
                     @endforeach
-                    <div class="form-check">
+                        <div class="form-check">
                         <label class="labelcontainer">
                             <a @click="selectedCategory = [], searchRestaurants() " name="query" class="form-check-input" type="checkbox" value="Azzera" ><span class="checkmark"><i class="fas fa-trash-alt"></i></span></a>
-
                         </label>
                     </div>
-          </div>
-          <div class="container-card">
-
-              <h1 v-if="!selectedCategory.length">Ultimi Ristoranti Inseriti</h1>
-              <h1 v-else>I risultati per la tua selezione</h1>
-              <div class="cards">
-                  <div class="card" v-for="restaurant in restaurants">
+                </div>
+                <div class="container-card">
+                    <h3 v-if="!selectedCategory.length">Ultimi Ristoranti Inseriti</h3>
+                    <h1 v-else>I risultati per la tua selezione</h1>
+                    <div class="cards" :class="!selectedCategory.length? '' : 'selected-search'">
+                    <div class="card" v-for="restaurant in restaurants">
                       <a :href="'{{url('/restaurants')}}'+'/'+ restaurant.slug" >
                           <h2>@{{ restaurant.name }}</h2>
                           <img v-if="restaurant.cover == null" src="{{url('/images/image-non-disp.png')}}" alt="">
@@ -64,14 +61,13 @@
                           <div>
                               <span v-for="category in restaurant.categories">@{{category.name}}</span>
                           </div>
-
                       </a>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
   @if ($transaction_result === true)

@@ -57,7 +57,7 @@
 
         .menu-filter {
             background-color: red;
-            padding: 50px 0;
+            padding: 50px 0 0;
             border-bottom: 1px solid $gold;
             border-top: 1px solid $gold;
             display: flex;
@@ -142,6 +142,9 @@
                 font-size: 36px;
                 padding: 12px 0;
                 background-image: radial-gradient( #d0eb99, #d0eb99 20%, #00ccbc 50%);
+            }
+            .selected-search {
+                background-color: honeydew;
             }
 
             .cards {

@@ -2178,7 +2178,8 @@ var app = new Vue({
     dropinInstance: null,
     sorted: false,
     courted: false,
-    visible: false
+    visible: false,
+    cartsign: 0
   },
   methods: {
     clear: function clear() {
@@ -2190,6 +2191,7 @@ var app = new Vue({
       this.cartCookie = [];
       this.cart = [];
       this.totalPriceCookie = 0;
+      this.totalQuantity = 0;
       this.totalPrice = 0;
       Cookies.remove('nome');
       Cookies.remove('email');
@@ -2274,7 +2276,7 @@ var app = new Vue({
         console.log(cData);
         ordersChart.canvas.parentNode.style.maxHeight = '60%';
         ordersChart.canvas.parentNode.style.maxWidth = '100%';
-        var ordersChart = new Chart(ordersChart, {
+        ordersChart = new Chart(ordersChart, {
           type: 'bar',
           data: {
             labels: cData.label,
@@ -2411,8 +2413,8 @@ var app = new Vue({
             this.dishesList[i].quantity++; // altrimenti aggiungi 1
 
             this.totalPrice = Math.round(this.totalPrice * 100) / 100 + Math.round(this.dishesList[i].price * 100) / 100; // aggiungo il prezzo del piatto aggiunto nel carrello al totale
+            // this.showCart = true;
 
-            this.showCart = true;
             return this.totalQuantity = this.dishesList.reduce(function (total, product) {
               return total + product.quantity;
             }, 0);
